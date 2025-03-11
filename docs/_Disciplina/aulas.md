@@ -6,6 +6,7 @@
 | __02__ - 18/02/25   | Do Cascata ao Ágil |
 | __03__ - 25/02/25   | - Configuração de [ Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm)<br> |
 | __04__ - 10/03/25   | - Site Mkdocs <br>- Roteiro Github <br>- Configuração repositório Github <br>- Apresentação de Tema do Projeto<br>- Principais Funcionalidades do Projeto <br>- [Scrum](../assets/Aulas/Mapa+do+Scrum+Framework+utilizado+nas+aulas.pdf) | 
+|__05__ - 18/03/25   | - [User Stories](../assets/Aulas/Scrum.pdf) |
 <!-- | __03__ - 22/08/24   | - Apresentação de Tema do Projeto<br>- Configuração de [ Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm)<br> |
 | __04__ - 29/08/24   | - Site Mkdocs<br>- Roteiro Github<br>- Configuração repositório Github<br>- Apresentação de Tema do Projeto<br>- Principais Funcionalidades do Projeto |
 | __05__ - 05/09/24   | Ibmec Day |
