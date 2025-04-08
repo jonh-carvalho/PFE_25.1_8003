@@ -4,7 +4,7 @@
 |----------|----------|
 | __01__ - 11/02/25   | - Apresentação da Disciplina <br> - Processo de Desenvolvimento <br> - [Do Cascata ao Ágil](../assets/Aulas/Do%20Cascata%20ao%20Ágil%20-%20Front-End.pdf)|
 | __02__ - 18/02/25   | Do Cascata ao Ágil |
-| __03__ - 25/02/25   | - Configuração de [ Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm)<br> |
+| __03__ - 25/02/25   | - Configuração de [ Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABng3aZ0HtBI38y6beD8dItQ?e=YGKULY)<br> |
 | __04__ - 10/03/25   | - Site Mkdocs <br>- Roteiro Github <br>- Configuração repositório Github <br>- Apresentação de Tema do Projeto<br>- Principais Funcionalidades do Projeto <br>- [Scrum](../assets/Aulas/Mapa+do+Scrum+Framework+utilizado+nas+aulas.pdf) | 
 |__05__ - 18/03/25   | - [User Stories](../assets/Aulas/Scrum.pdf) |
 | __06__ - 25/03/25   | - 5w2h <br>- [Brainstorm](../assets/Aulas/O%20processo%20de brainstorm.pdf)<br>- [Mapa Mental](../assets/Aulas/Mapa%20Mental.pdf) |
