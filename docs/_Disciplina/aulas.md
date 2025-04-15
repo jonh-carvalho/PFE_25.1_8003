@@ -10,6 +10,17 @@
 | __06__ - 25/03/25   | - 5w2h <br>- [Brainstorm](../assets/Aulas/O%20processo%20de brainstorm.pdf)<br>- [Mapa Mental](../assets/Aulas/Mapa%20Mental.pdf) |
 | __07__ - 01/04/25   | - Documento de Visão <br> - Protótipo de baixa fidelidade <br> - [Análise de Tarefas - AHT](../assets/Aulas/Análise%20de%20Tarefas.pdf) <br> - [Roteiro](https://jonh-carvalho.github.io/PFE_25.1_8001/_Disciplina/Roteiros/EpicsFeaturesUserStories/) |
 | __08__ - 08/04/25   | AP1 |
+|__09__ - 15/04/25   | [Avaliação de Interfaces](../assets/Aulas/Avaliação_de_Interfaces.pdf) <br> - [Introdução ao React](../assets/Aulas/Introducao-ao-Reactjs.pdf)|
+|__10__ - 22/04/25   | Feriado |
+|__11__ - 29/04/25   | React -Sprint II |
+|__12__ - 06/05/25   | React - |
+|__13__ - 13/05/25   | React - Sprint III |
+|__14__ - 20/05/25   | React - |
+|__15__ - 27/05/25   | React - Sprint IV |
+|__16__ - 03/06/25   | React |
+|__17__ - 10/06/25   | React - Sprint V |
+|__18__ - 17/06/25   | AP2 - Apresentação |
+|__19__ - 24/06/25   | AS |
 <!-- | __03__ - 22/08/24   | - Apresentação de Tema do Projeto<br>- Configuração de [ Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm)<br> |
 | __04__ - 29/08/24   | - Site Mkdocs<br>- Roteiro Github<br>- Configuração repositório Github<br>- Apresentação de Tema do Projeto<br>- Principais Funcionalidades do Projeto |
 | __05__ - 05/09/24   | Ibmec Day |
