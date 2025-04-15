@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>03 Spa - PFE_25.1_8003</title>
+    <title>SPA - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -110,19 +110,19 @@
         
             
 <li >
-    <a href="../01_Intro/">01 Intro</a>
+    <a href="../01_Intro/">Introdução ao React com HTML e CDN</a>
 </li>
 
         
             
 <li >
-    <a href="../02_NodeViteReact/">02 NodeViteReact</a>
+    <a href="../02_NodeViteReact/">Criando um App React com Vite</a>
 </li>
 
         
             
 <li class="active">
-    <a href="./">03 Spa</a>
+    <a href="./">SPA</a>
 </li>
 
         
@@ -182,6 +182,12 @@
   <li class="dropdown-submenu">
     <a tabindex="-1" href="">Roteiros</a>
     <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Roteiros/Aht/">06 - Análise de Tarefas</a>
+</li>
+
         
             
 <li >
@@ -330,37 +336,36 @@
                 
             <li class="second-level"><a href="#vantagens-de-uma-spa">Vantagens de uma SPA:</a></li>
                 
-            <li class="second-level"><a href="#desvantagens">Desvantagens:</a></li>
+            <li class="second-level"><a href="#desvantagens">Desvantagens</a></li>
                 
-            <li class="second-level"><a href="#exemplos-de-spas">Exemplos de SPAs:</a></li>
+            <li class="second-level"><a href="#exemplos-de-spas">Exemplos de SPAs</a></li>
                 
-        <li class="first-level "><a href="#criando-um-spa-para-um-evento-com-react-e-vite">Criando um SPA para um Evento com React e Vite</a></li>
-            <li class="second-level"><a href="#entendendo-o-contexto">Entendendo o Contexto</a></li>
+            <li class="second-level"><a href="#criando-um-spa-para-um-evento-com-react-e-vite">Criando um SPA para um Evento com React e Vite</a></li>
                 
-                <li class="third-level"><a href="#estrutura-proposta">Estrutura Proposta</a></li>
-            <li class="second-level"><a href="#componentes-principais">Componentes Principais:</a></li>
+                <li class="third-level"><a href="#entendendo-o-contexto">Entendendo o Contexto</a></li>
+            <li class="second-level"><a href="#componentes-principais">Componentes Principais</a></li>
                 
-            <li class="second-level"><a href="#outras-paginas">Outras páginas:</a></li>
+            <li class="second-level"><a href="#outras-paginas">Outras páginas</a></li>
                 
-            <li class="second-level"><a href="#funcionalidades-essenciais">Funcionalidades Essenciais:</a></li>
+            <li class="second-level"><a href="#funcionalidades-essenciais">Funcionalidades Essenciais</a></li>
                 
-            <li class="second-level"><a href="#tecnologias-adicionais">Tecnologias Adicionais:</a></li>
+            <li class="second-level"><a href="#tecnologias-adicionais">Tecnologias Adicionais</a></li>
                 
-            <li class="second-level"><a href="#exemplo-de-componente-eventcard">Exemplo de Componente EventCard:</a></li>
+            <li class="second-level"><a href="#exemplo-de-componente-eventcard">Exemplo de Componente EventCard</a></li>
                 
-            <li class="second-level"><a href="#use-o-codigo-com-cuidado">Use o código com cuidado.</a></li>
+            <li class="second-level"><a href="#use-o-codigo-com-cuidado">Use o código com cuidado</a></li>
                 
-            <li class="second-level"><a href="#proximos-passos">Próximos Passos:</a></li>
+            <li class="second-level"><a href="#proximos-passos">Próximos Passos</a></li>
                 
-            <li class="second-level"><a href="#consideracoes-adicionais">Considerações Adicionais:</a></li>
+            <li class="second-level"><a href="#consideracoes-adicionais">Considerações Adicionais</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="spa">SPA</h2>
+<h1 id="spa">SPA</h1>
 <p>Uma <strong>SPA</strong> (Single Page Application) é um tipo de aplicação web em que todo o conteúdo necessário para navegar pelo site é carregado inicialmente ou dinamicamente sem recarregar a página inteira. Ao contrário de um site tradicional, onde cada vez que o usuário clica em um link ou navega para uma nova seção há um carregamento completo da página, em uma SPA apenas o conteúdo específico da página é atualizado, o que proporciona uma experiência de usuário mais rápida e fluida.</p>
-<h3 id="caracteristicas-principais-de-uma-spa">Características principais de uma SPA:</h3>
+<h2 id="caracteristicas-principais-de-uma-spa">Características principais de uma SPA:</h2>
 <p>1. <strong>Carregamento único de página</strong>:</p>
 <ul>
 <li>Na primeira visita do usuário, a aplicação faz um grande carregamento inicial, mas depois disso, todo o conteúdo é dinamicamente atualizado na mesma página sem a necessidade de recarregar toda a estrutura da página.</li>
@@ -381,7 +386,7 @@
 <ul>
 <li>Frameworks como <strong>React</strong>, <strong>Vue.js</strong>, <strong>Angular</strong>, e ferramentas como <strong>Vite</strong> ou <strong>Webpack</strong> são amplamente usadas para construir SPAs. Eles permitem um carregamento eficiente e a criação de componentes reutilizáveis.</li>
 </ul>
-<h3 id="vantagens-de-uma-spa">Vantagens de uma SPA:</h3>
+<h2 id="vantagens-de-uma-spa">Vantagens de uma SPA:</h2>
 <ul>
 <li>
 <p><strong>Melhor experiência do usuário (UX)</strong>: Navegação suave, sem interrupções devido a recarregamentos de página.</p>
@@ -393,7 +398,7 @@
 <p><strong>Desempenho aprimorado</strong>: Depois do carregamento inicial, as requisições são menores e mais rápidas, já que apenas os dados mudam, e não o layout completo da página.</p>
 </li>
 </ul>
-<h3 id="desvantagens">Desvantagens:</h3>
+<h2 id="desvantagens">Desvantagens</h2>
 <ul>
 <li>
 <p><strong>SEO</strong>: Embora o SEO para SPAs tenha melhorado com técnicas como server-side rendering (SSR) e prerendering, ainda pode ser mais desafiador quando comparado a sites tradicionais.</p>
@@ -402,7 +407,7 @@
 <p><strong>Carregamento inicial maior</strong>: A aplicação pode ter um tempo de carregamento inicial mais longo devido à necessidade de carregar grande parte do conteúdo e do código de uma vez.</p>
 </li>
 </ul>
-<h3 id="exemplos-de-spas">Exemplos de SPAs:</h3>
+<h2 id="exemplos-de-spas">Exemplos de SPAs</h2>
 <ul>
 <li>
 <p>Aplicativos de redes sociais como <strong>Facebook</strong> e <strong>Instagram</strong>.</p>
@@ -440,7 +445,7 @@
 </ul>
 <h4 id="estrutura-proposta">Estrutura Proposta</h4>
 <p>Com base em um cenário geral, podemos propor uma estrutura básica para o SPA:</p>
-<p>my-event-app/
+<pre><code>my-event-app/
     public/
         index.html
     src/
@@ -450,28 +455,29 @@
             Navbar.jsx
             EventCard.jsx
             SpeakerCard.jsx
-            // ... outros componentes</p>
-<pre><code>    pages/
-        Home.jsx
-        Schedule.jsx
-        Speakers.jsx
-        About.jsx
-        Registration.jsx
-        // ... outras páginas
+            // ... outros componentes
 
-    utils/
-        api.js // Para chamadas à API
-        helpers.js // Funções auxiliares
+        pages/
+            Home.jsx
+            Schedule.jsx
+            Speakers.jsx
+            About.jsx
+            Registration.jsx
+            // ... outras páginas
 
-    styles/
-        global.css
-        theme.css
+        utils/
+            api.js // Para chamadas à API
+            helpers.js // Funções auxiliares
 
-    App.jsx
-    index.css
-    main.jsx
+        styles/
+            global.css
+            theme.css
+
+        App.jsx
+        index.css
+        main.jsx
 </code></pre>
-<h3 id="componentes-principais">Componentes Principais:</h3>
+<h2 id="componentes-principais">Componentes Principais</h2>
 <ul>
 <li>
 <p>Header: Contém o logo, menu de navegação e outras informações gerais.</p>
@@ -487,7 +493,7 @@
 </li>
 <li>SpeakerCard: Componente para exibir informações sobre cada palestrante (nome, foto, bio).</li>
 </ul>
-<h3 id="outras-paginas">Outras páginas:</h3>
+<h2 id="outras-paginas">Outras páginas</h2>
 <ul>
 <li>
 <p>Home: Página inicial com informações gerais sobre o evento.</p>
@@ -505,7 +511,7 @@
 <p>Registration: Formulário de inscrição.</p>
 </li>
 </ul>
-<h3 id="funcionalidades-essenciais">Funcionalidades Essenciais:</h3>
+<h2 id="funcionalidades-essenciais">Funcionalidades Essenciais</h2>
 <ul>
 <li>
 <p>Navegação: Implementar navegação entre as diferentes páginas utilizando um roteador como o React Router.</p>
@@ -526,7 +532,7 @@
 <p>Acessibilidade: Seguir as diretrizes de acessibilidade para garantir que o SPA seja utilizável por todos.</p>
 </li>
 </ul>
-<h3 id="tecnologias-adicionais">Tecnologias Adicionais:</h3>
+<h2 id="tecnologias-adicionais">Tecnologias Adicionais</h2>
 <ul>
 <li>
 <p>Styling: Utilizar CSS, Sass ou uma biblioteca de estilos como o Material UI ou o Tailwind CSS.</p>
@@ -541,7 +547,7 @@
 <p>Testes: Implementar testes unitários e de integração para garantir a qualidade do código.</p>
 </li>
 </ul>
-<h3 id="exemplo-de-componente-eventcard">Exemplo de Componente EventCard:</h3>
+<h2 id="exemplo-de-componente-eventcard">Exemplo de Componente EventCard</h2>
 <pre><code class="language-js">import React from 'react';
 
 function EventCard({ title, date, description }) {
@@ -557,8 +563,8 @@ function EventCard({ title, date, description }) {
 
 export default EventCard;
 </code></pre>
-<h3 id="use-o-codigo-com-cuidado">Use o código com cuidado.</h3>
-<h3 id="proximos-passos">Próximos Passos:</h3>
+<h2 id="use-o-codigo-com-cuidado">Use o código com cuidado</h2>
+<h2 id="proximos-passos">Próximos Passos</h2>
 <ul>
 <li>
 <p>Definir a arquitetura: Escolher uma arquitetura de componentes e como organizar o código.</p>
@@ -576,7 +582,7 @@ export default EventCard;
 <p>Deploy: Hospedar o SPA em um servidor.</p>
 </li>
 </ul>
-<h3 id="consideracoes-adicionais">Considerações Adicionais:</h3>
+<h2 id="consideracoes-adicionais">Considerações Adicionais</h2>
 <ul>
 <li>
 <p>Personalização: Adaptar a estrutura e as funcionalidades de acordo com as necessidades específicas do evento.</p>

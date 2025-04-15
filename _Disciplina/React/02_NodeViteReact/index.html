@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>02 NodeViteReact - PFE_25.1_8003</title>
+    <title>Criando um App React com Vite - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -110,19 +110,19 @@
         
             
 <li >
-    <a href="../01_Intro/">01 Intro</a>
+    <a href="../01_Intro/">Introdução ao React com HTML e CDN</a>
 </li>
 
         
             
 <li class="active">
-    <a href="./">02 NodeViteReact</a>
+    <a href="./">Criando um App React com Vite</a>
 </li>
 
         
             
 <li >
-    <a href="../03_Spa/">03 Spa</a>
+    <a href="../03_Spa/">SPA</a>
 </li>
 
         
@@ -182,6 +182,12 @@
   <li class="dropdown-submenu">
     <a tabindex="-1" href="">Roteiros</a>
     <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Roteiros/Aht/">06 - Análise de Tarefas</a>
+</li>
+
         
             
 <li >
@@ -332,45 +338,41 @@
                 
             <li class="second-level"><a href="#construindo-o-app-um-contador-simples">Construindo o App: Um Contador Simples</a></li>
                 
-            <li class="second-level"><a href="#demonstracao-de-outros-conceitos">Demonstração de Outros Conceitos</a></li>
-                
-            <li class="second-level"><a href="#proximos-passos">Próximos Passos</a></li>
-                
+                <li class="third-level"><a href="#demonstracao-de-outros-conceitos">Demonstração de Outros Conceitos</a></li>
+                <li class="third-level"><a href="#proximos-passos">Próximos Passos</a></li>
             <li class="second-level"><a href="#exemplo-mais-completo-uma-lista-de-tarefas">Exemplo mais completo: Uma lista de tarefas</a></li>
                 
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="criando-um-app-react-com-vite">Criando um App React com Vite</h2>
-<h3 id="por-que-usar-vite">Por que usar Vite?</h3>
+<h1 id="criando-um-app-react-com-vite">Criando um App React com Vite</h1>
+<h2 id="por-que-usar-vite">Por que usar Vite?</h2>
 <p>Vite é uma ferramenta de construção de front-end que oferece um desenvolvimento rápido e uma experiência de usuário aprimorada, especialmente para projetos React. Ela é mais leve e rápida que ferramentas como Webpack, proporcionando hot module replacement (HMR) quase instantâneo.</p>
-<h3 id="criando-o-projeto">Criando o Projeto</h3>
+<h2 id="criando-o-projeto">Criando o Projeto</h2>
 <p><strong>1. Instale o Node.js e npm (ou yarn):</strong></p>
 <ul>
 <li>Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em <a href="https://nodejs.org/">https://nodejs.org/</a>.</li>
-<li>Download the node.js LTS binary for Windows and extract it to your desired location Add the path of the nodejs folder to the PATH environment variable:</li>
+<li>Se estiver instalado faça o download do node.js LTS binary for Windows e extraia para o local desejado(Ex: c:\node) e adicione PATH do da pasta do node na variável de ambiente PATH.</li>
 </ul>
-<p>( Shortcut winkey+R and enter: rundll32 sysdm.cpl,EditEnvironmentVariables )</p>
+<blockquote>
+<p>Tecla Windows + R =&gt; digite <strong>rundll32 sysdm.cpl,EditEnvironmentVariables</strong></p>
+</blockquote>
 <p><strong>2. Crie um novo projeto:</strong></p>
-<p><strong>Bash</strong></p>
-<pre><code>npm create vite@latest my-react-app --template react
+<pre><code class="language-bash">npm create vite@latest my-react-app --template react
 </code></pre>
 <p>Substitua <code>my-react-app</code> pelo nome desejado para seu projeto.</p>
 <p><strong>3. Instale as dependências:</strong></p>
-<p><strong>Bash</strong></p>
-<pre><code>cd my-react-app
+<pre><code class="language-bash">cd my-react-app
 npm install
 </code></pre>
 <p><strong>4. Inicie o servidor de desenvolvimento:</strong></p>
-<p><strong>Bash</strong></p>
-<pre><code>npm run dev
+<pre><code class="language-bash">npm run dev
 </code></pre>
 <p>Seu aplicativo estará disponível em <code>http://localhost:3000/</code>.</p>
-<h3 id="construindo-o-app-um-contador-simples">Construindo o App: Um Contador Simples</h3>
+<h2 id="construindo-o-app-um-contador-simples">Construindo o App: Um Contador Simples</h2>
 <p><strong>1. Abra o arquivo <code>src/App.jsx</code>:</strong></p>
-<p><strong>JavaScript</strong></p>
-<pre><code>import React, { useState } from'react';
+<pre><code class="language-js">import React, { useState } from'react';
 
 functionApp() {
   const [count, setCount] = useState(0);
@@ -412,9 +414,8 @@ export default App;
 <li><strong>Hooks:</strong> Utilize hooks personalizados para criar lógica reutilizável.</li>
 <li><strong>Styled Components:</strong> Estilize seus componentes de forma mais declarativa.</li>
 </ul>
-<h3 id="exemplo-mais-completo-uma-lista-de-tarefas"><strong>Exemplo mais completo: Uma lista de tarefas</strong></h3>
-<p><strong>JavaScript</strong></p>
-<pre><code>import React, { useState } from'react';
+<h2 id="exemplo-mais-completo-uma-lista-de-tarefas"><strong>Exemplo mais completo: Uma lista de tarefas</strong></h2>
+<pre><code class="language-jsx">import React, { useState } from'react';
 
 functionApp() {
   const [tasks, setTasks] = useState([]);
