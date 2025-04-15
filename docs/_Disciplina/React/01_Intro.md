@@ -1,34 +1,35 @@
----
+# Introdução ao React com HTML e CDN
 
-### **Introdução ao React com HTML e CDN**
+## Objetivo
 
----
-
-#### **Objetivo:**
 Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML utilizando um link para a CDN, sem a necessidade de um ambiente de desenvolvimento local como o Node.js.
 
 ---
 
-### **Estrutura do Roteiro:**
+## **Estrutura do Roteiro:**
 
-#### **1. Introdução ao React**
-   - **Definição**: React é uma biblioteca JavaScript criada pelo Facebook para criar interfaces de usuário de forma declarativa e eficiente.
-   - **Vantagens**:
-     - Componentes reutilizáveis.
-     - Atualizações rápidas do DOM (Virtual DOM).
-     - Facilita a criação de Single Page Applications (SPAs).
-   
+### **1. Introdução ao React**
+
+* **Definição**: React é uma biblioteca JavaScript criada pelo Facebook para criar interfaces de usuário de forma declarativa e eficiente.
+* **Vantagens**:
+* Componentes reutilizáveis.
+* Atualizações rápidas do DOM (Virtual DOM).
+* Facilita a criação de Single Page Applications (SPAs).
+
 ---
 
-#### **2. Preparando o Ambiente**
-   - Não é necessário instalar nada localmente para este exemplo inicial, vamos usar uma página HTML e um link para a biblioteca via CDN.
-   
+### 2. Preparando o Ambiente
+
+* Não é necessário instalar nada localmente para este exemplo inicial, vamos usar uma página HTML e um link para a biblioteca via CDN.
+
 ---
 
-#### **3. Estrutura Básica do Projeto**
-   - **HTML Básico**: 
-     - Comece com a criação de uma página HTML simples contendo um elemento `<div>` que será usado como “ponto de montagem” para o React.
-     
+### **3. Estrutura Básica do Projeto**
+
+* **HTML Básico**
+
+* Comece com a criação de uma página HTML simples contendo um elemento `<div>` que será usado como “ponto de montagem” para o React.
+
 ```html
    <!DOCTYPE html>
    <html lang="en">
@@ -52,11 +53,10 @@ Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML
 
 ---
 
-#### **4. Criando um Elemento React**
-   
-   
-   Crie o arquivo `app.js` com o seguinte código:
-   
+### 4. Criando um Elemento React
+
+Crie o arquivo `app.js` com o seguinte código:
+
 ```javascript
    ReactDOM.render(
     React.createElement(

@@ -1,23 +1,21 @@
-## Criando um App React com Vite
+# Criando um App React com Vite
 
-### Por que usar Vite?
+## Por que usar Vite?
 
 Vite é uma ferramenta de construção de front-end que oferece um desenvolvimento rápido e uma experiência de usuário aprimorada, especialmente para projetos React. Ela é mais leve e rápida que ferramentas como Webpack, proporcionando hot module replacement (HMR) quase instantâneo.
 
-### Criando o Projeto
+## Criando o Projeto
 
 **1. Instale o Node.js e npm (ou yarn):**
 
 * Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/).
-* Download the node.js LTS binary for Windows and extract it to your desired location Add the path of the nodejs folder to the PATH environment variable:
+* Se estiver instalado faça o download do node.js LTS binary for Windows e extraia para o local desejado(Ex: c:\node) e adicione PATH do da pasta do node na variável de ambiente PATH.
 
-( Shortcut winkey+R and enter: rundll32 sysdm.cpl,EditEnvironmentVariables )
+> Tecla Windows + R => digite **rundll32 sysdm.cpl,EditEnvironmentVariables**
 
 **2. Crie um novo projeto:**
 
-**Bash**
-
-```
+```bash
 npm create vite@latest my-react-app --template react
 ```
 
@@ -25,30 +23,24 @@ Substitua `my-react-app` pelo nome desejado para seu projeto.
 
 **3. Instale as dependências:**
 
-**Bash**
-
-```
+```bash
 cd my-react-app
 npm install
 ```
 
 **4. Inicie o servidor de desenvolvimento:**
 
-**Bash**
-
-```
+```bash
 npm run dev
 ```
 
 Seu aplicativo estará disponível em `http://localhost:3000/`.
 
-### Construindo o App: Um Contador Simples
+## Construindo o App: Um Contador Simples
 
 **1. Abra o arquivo `src/App.jsx`:**
 
-**JavaScript**
-
-```
+```js
 import React, { useState } from'react';
 
 functionApp() {
@@ -93,11 +85,9 @@ Outro pontos fundamentais do React:
 * **Hooks:** Utilize hooks personalizados para criar lógica reutilizável.
 * **Styled Components:** Estilize seus componentes de forma mais declarativa.
 
-### **Exemplo mais completo: Uma lista de tarefas**
+## **Exemplo mais completo: Uma lista de tarefas**
 
-**JavaScript**
-
-```
+```jsx
 import React, { useState } from'react';
 
 functionApp() {
