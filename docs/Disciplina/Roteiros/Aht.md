@@ -14,7 +14,7 @@ Aqui estão os principais elementos de um diagrama de AHT:
 
 4. **Operações**: São as ações específicas ou decisões que o usuário deve tomar durante a execução das subtarefas.
 
-### Exemplo Simplificado de um Diagrama AHT 
+### Exemplo Simplificado de um Diagrama AHT
 
 #### Sistema de Biblioteca
 
