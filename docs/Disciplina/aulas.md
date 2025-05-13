@@ -12,13 +12,13 @@
 | __08__ - 08/04/25   | AP1 |
 |__09__ - 15/04/25   | [Avaliação de Interfaces](../assets/Aulas/Avaliação_de_Interfaces.pdf) <br> - [Introdução ao React](../assets/Aulas/Introducao-ao-Reactjs.pdf)|
 |__10__ - 22/04/25   | Feriado |
-|__11__ - 29/04/25   | React -Sprint II |
+|__11__ - 29/04/25   | React -Sprint II - Protótipo|
 |__12__ - 06/05/25   | React - |
-|__13__ - 13/05/25   | React - Sprint III |
+|__13__ - 13/05/25   | React - Sprint III - Site HTML|
 |__14__ - 20/05/25   | React - |
-|__15__ - 27/05/25   | React - Sprint IV |
+|__15__ - 27/05/25   | React - Sprint IV -Site React/Components|
 |__16__ - 03/06/25   | React |
-|__17__ - 10/06/25   | React - Sprint V |
+|__17__ - 10/06/25   | React - Sprint V - Site Completo|
 |__18__ - 17/06/25   | AP2 - Apresentação |
 |__19__ - 24/06/25   | AS |
 <!-- | __03__ - 22/08/24   | - Apresentação de Tema do Projeto<br>- Configuração de [ Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm)<br> |
