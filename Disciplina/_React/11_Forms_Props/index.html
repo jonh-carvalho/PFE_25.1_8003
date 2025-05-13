@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>10 Fetch - PFE_25.1_8003</title>
+    <title>11 Forms Props - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -105,7 +105,52 @@
                         
                             
   <li class="dropdown-submenu">
-    <a tabindex="-1" href="">React</a>
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Roteiros/AT/">06 - Análise de Tarefas</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/Aht/">06 - Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/DesignThinking/">04 Design Thinking</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/EpicsFeaturesUserStories/">09 - História de Usuário</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/receitas/">Receitas</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href=""> React</a>
     <ul class="dropdown-menu">
         
             
@@ -163,65 +208,20 @@
 
         
             
-<li class="active">
-    <a href="./">10 Fetch</a>
+<li >
+    <a href="../10_Fetch/">10 Fetch</a>
 </li>
 
         
             
-<li >
-    <a href="../11_Forms_Props/">11 Forms Props</a>
+<li class="active">
+    <a href="./">11 Forms Props</a>
 </li>
 
         
             
 <li >
     <a href="../12_useState_useRef/">12 useState useRef</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-                        
-                            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Roteiros</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="../../Roteiros/AT/">06 - Análise de Tarefas</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/Aht/">06 - Análise Hierárquica de Tarefas (AHT)</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/DesignThinking/">04 Design Thinking</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/EpicsFeaturesUserStories/">09 - História de Usuário</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/prot%C3%B3tipo/">Protótipo</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/receitas/">Receitas</a>
 </li>
 
         
@@ -297,17 +297,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../09_Lendo%20Dados/">
+                        <a rel="prev" href="../10_Fetch/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../11_Forms_Props/">
+                        <a rel="next" href="../12_useState_useRef/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/React/10_Fetch.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/_React/11_Forms_Props.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -319,78 +319,138 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#caracteristicas-principais-do-fetch">Características principais do fetch:</a></li>
-        <li class="first-level "><a href="#exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do fetch:</a></li>
-        <li class="first-level "><a href="#um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o fetch com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</a></li>
-        <li class="first-level "><a href="#exemplo-de-requisicao-get">Exemplo de requisição GET</a></li>
-        <li class="first-level "><a href="#exemplo-de-requisicao-post">Exemplo de requisição POST</a></li>
-        <li class="first-level "><a href="#explicacao">Explicação:</a></li>
+        <li class="first-level active"><a href="#1-formularios-controlados">1. Formulários Controlados</a></li>
+            <li class="second-level"><a href="#exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com useState</a></li>
+                
+            <li class="second-level"><a href="#vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</a></li>
+                
+        <li class="first-level "><a href="#2-formularios-nao-controlados">2. Formulários Não Controlados</a></li>
+            <li class="second-level"><a href="#exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com useRef</a></li>
+                
+            <li class="second-level"><a href="#vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</a></li>
+                
+        <li class="first-level "><a href="#3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</a></li>
+        <li class="first-level "><a href="#4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p><code>fetch</code> é uma API nativa do JavaScript que permite realizar requisições HTTP de forma simples e moderna. Ela é usada principalmente para buscar (ou "fetch") recursos de um servidor, como dados de uma API, arquivos ou outros tipos de conteúdo. O <code>fetch</code> retorna uma <em>Promise</em>, o que significa que ele trabalha de forma assíncrona, permitindo que o JavaScript continue a executar outras operações enquanto a requisição está em andamento.</p>
-<h3 id="caracteristicas-principais-do-fetch">Características principais do <code>fetch</code>:</h3>
-<ol>
-<li><strong>Simplicidade</strong>: Comparado ao antigo <code>XMLHttpRequest</code>, o <code>fetch</code> possui uma sintaxe muito mais fácil de usar.</li>
-<li><strong>Promessas (Promises)</strong>: O <code>fetch</code> retorna uma <code>Promise</code>, o que facilita o tratamento de operações assíncronas.</li>
-<li><strong>Suporte a múltiplos métodos HTTP</strong>: Pode ser usado para diferentes tipos de requisições, como <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, etc.</li>
-<li><strong>Configuração flexível</strong>: Permite configurar cabeçalhos, enviar dados no corpo da requisição, e muito mais.</li>
-</ol>
-<h3 id="exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do <code>fetch</code>:</h3>
-<pre><code class="language-javascript">fetch('https://api.exemplo.com/dados')
-  .then(response =&gt; response.json())  // Converte a resposta para JSON
-  .then(data =&gt; console.log(data))    // Exibe os dados no console
-  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
+<p>No React, formulários funcionam de maneira semelhante ao HTML tradicional, mas com algumas diferenças importantes devido ao conceito de <strong>estado</strong> e <strong>eventos controlados</strong>. Em vez de apenas enviar dados ao servidor ao submeter o formulário, o React mantém os valores dos campos de entrada sincronizados com o estado do componente. Isso é feito através de formulários <strong>controlados</strong> e <strong>não controlados</strong>.</p>
+<h3 id="1-formularios-controlados">1. Formulários Controlados</h3>
+<p>Em formulários controlados, o estado do React mantém os valores dos campos. Isso significa que o valor de cada campo é controlado por uma variável no estado do componente, permitindo controle total sobre o que é exibido e processado.</p>
+<h4 id="exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com <code>useState</code></h4>
+<p>Aqui está um exemplo de um formulário de login que usa o estado para controlar os valores dos campos:</p>
+<pre><code class="language-jsx">import React, { useState } from 'react';
+
+function FormularioLogin() {
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+
+  const handleSubmit = (e) =&gt; {
+    e.preventDefault();
+    console.log('Email:', email);
+    console.log('Senha:', senha);
+    // Processar o login
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;label&gt;
+        Email:
+        &lt;input
+          type=&quot;email&quot;
+          value={email}
+          onChange={(e) =&gt; setEmail(e.target.value)}
+        /&gt;
+      &lt;/label&gt;
+      &lt;label&gt;
+        Senha:
+        &lt;input
+          type=&quot;password&quot;
+          value={senha}
+          onChange={(e) =&gt; setSenha(e.target.value)}
+        /&gt;
+      &lt;/label&gt;
+      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}
+
+export default FormularioLogin;
 </code></pre>
-<p>Neste exemplo, o <code>fetch</code> faz uma requisição <code>GET</code> para a URL fornecida, processa a resposta como JSON, e lida com possíveis erros.</p>
-<h3 id="um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o <code>fetch</code> com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</h3>
-<h3 id="exemplo-de-requisicao-get">Exemplo de requisição <code>GET</code></h3>
-<p>Neste exemplo, vamos buscar uma lista de posts da API usando o <code>fetch</code>.</p>
-<pre><code class="language-javascript">// Fazendo uma requisição GET para obter posts da API JSONPlaceholder
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response =&gt; {
-    if (!response.ok) {
-      throw new Error('Erro na requisição: ' + response.status);
-    }
-    return response.json();  // Converte a resposta para JSON
-  })
-  .then(posts =&gt; {
-    console.log(posts);  // Exibe os posts no console
-  })
-  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
-</code></pre>
-<h3 id="exemplo-de-requisicao-post">Exemplo de requisição <code>POST</code></h3>
-<p>Neste exemplo, vamos enviar um novo post para a API com uma requisição <code>POST</code>.</p>
-<pre><code class="language-javascript">// Enviando dados para criar um novo post
-fetch('https://jsonplaceholder.typicode.com/posts', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    title: 'Meu novo post',
-    body: 'Este é o conteúdo do post',
-    userId: 1
-  }),
-})
-  .then(response =&gt; {
-    if (!response.ok) {
-      throw new Error('Erro na requisição: ' + response.status);
-    }
-    return response.json();  // Converte a resposta para JSON
-  })
-  .then(post =&gt; {
-    console.log('Post criado:', post);  // Exibe o post criado
-  })
-  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
-</code></pre>
-<h3 id="explicacao">Explicação:</h3>
+<p>Neste exemplo:</p>
 <ul>
-<li><strong>GET</strong>: O primeiro exemplo faz uma requisição para obter uma lista de posts, e a resposta é convertida para JSON e exibida no console.</li>
-<li><strong>POST</strong>: No segundo exemplo, criamos um novo post com os campos <code>title</code>, <code>body</code> e <code>userId</code>, enviando esses dados como JSON no corpo da requisição.</li>
+<li><strong><code>email</code> e <code>senha</code></strong> são estados que armazenam os valores dos campos.</li>
+<li>O <code>onChange</code> atualiza o estado com o valor atual do campo.</li>
+<li>O <code>handleSubmit</code> previne o envio do formulário (<code>e.preventDefault()</code>) e pode ser usado para processar dados ou enviar ao servidor.</li>
 </ul>
-<p>A API do JSONPlaceholder é ótima para testes rápidos e experimentação com <code>fetch</code>.</p></div>
+<h4 id="vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</h4>
+<ul>
+<li><strong>Controle Total</strong>: O React controla o estado dos campos, permitindo validações e alterações dinâmicas.</li>
+<li><strong>Validação e Manipulação</strong>: Facilidade em validar campos à medida que o usuário digita.</li>
+<li><strong>Sincronização</strong>: Como os dados dos campos estão no estado, é fácil compartilhar e processar dados em outros componentes.</li>
+</ul>
+<h3 id="2-formularios-nao-controlados">2. Formulários Não Controlados</h3>
+<p>Em formulários não controlados, os valores dos campos não são armazenados no estado, mas diretamente nos elementos do DOM. O React pode acessar o valor do campo diretamente com uma referência (<code>ref</code>) apenas quando necessário.</p>
+<h4 id="exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com <code>useRef</code></h4>
+<p>Aqui está um exemplo de formulário de login usando o <code>useRef</code> para acessar os valores:</p>
+<pre><code class="language-jsx">import React, { useRef } from 'react';
+
+function FormularioLogin() {
+  const emailRef = useRef();
+  const senhaRef = useRef();
+
+  const handleSubmit = (e) =&gt; {
+    e.preventDefault();
+    console.log('Email:', emailRef.current.value);
+    console.log('Senha:', senhaRef.current.value);
+    // Processar o login
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;label&gt;
+        Email:
+        &lt;input type=&quot;email&quot; ref={emailRef} /&gt;
+      &lt;/label&gt;
+      &lt;label&gt;
+        Senha:
+        &lt;input type=&quot;password&quot; ref={senhaRef} /&gt;
+      &lt;/label&gt;
+      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}
+
+export default FormularioLogin;
+</code></pre>
+<p>Neste exemplo:</p>
+<ul>
+<li><strong><code>emailRef</code> e <code>senhaRef</code></strong> são referências (<code>useRef</code>) aos elementos de entrada.</li>
+<li>No <code>handleSubmit</code>, <code>emailRef.current.value</code> e <code>senhaRef.current.value</code> acessam o valor dos campos diretamente.</li>
+</ul>
+<h4 id="vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</h4>
+<ul>
+<li><strong>Menos Complexidade</strong>: Útil em formulários simples, sem necessidade de armazenar dados no estado.</li>
+<li><strong>Desempenho</strong>: Em formulários complexos, o React evita re-renderizações ao não monitorar o valor de cada campo.</li>
+</ul>
+<h3 id="3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</h3>
+<ul>
+<li>Use <strong>formulários controlados</strong> quando precisar validar ou manipular dados dinamicamente, ou quando o valor dos campos precisa ser sincronizado com outros estados ou componentes.</li>
+<li>Use <strong>formulários não controlados</strong> para formulários simples, onde o valor é lido apenas na submissão ou em momentos específicos, sem necessidade de interação constante.</li>
+</ul>
+<h3 id="4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</h3>
+<p>Para adicionar validações, use o estado para verificar condições e exibir mensagens conforme necessário:</p>
+<pre><code class="language-jsx">const handleEmailChange = (e) =&gt; {
+  setEmail(e.target.value);
+  if (!e.target.value.includes('@')) {
+    setErroEmail('Email inválido');
+  } else {
+    setErroEmail('');
+  }
+};
+</code></pre>
+<p>React facilita a criação de formulários altamente dinâmicos, onde a experiência do usuário é controlada diretamente pelo estado do aplicativo.</p></div>
         
         
     </div>

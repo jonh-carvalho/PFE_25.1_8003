@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>11 Forms Props - PFE_25.1_8003</title>
+    <title>09 Lendo Dados - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -105,7 +105,52 @@
                         
                             
   <li class="dropdown-submenu">
-    <a tabindex="-1" href="">React</a>
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Roteiros/AT/">06 - Análise de Tarefas</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/Aht/">06 - Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/DesignThinking/">04 Design Thinking</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/EpicsFeaturesUserStories/">09 - História de Usuário</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/receitas/">Receitas</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href=""> React</a>
     <ul class="dropdown-menu">
         
             
@@ -157,8 +202,8 @@
 
         
             
-<li >
-    <a href="../09_Lendo%20Dados/">09 Lendo Dados</a>
+<li class="active">
+    <a href="./">09 Lendo Dados</a>
 </li>
 
         
@@ -169,59 +214,14 @@
 
         
             
-<li class="active">
-    <a href="./">11 Forms Props</a>
+<li >
+    <a href="../11_Forms_Props/">11 Forms Props</a>
 </li>
 
         
             
 <li >
     <a href="../12_useState_useRef/">12 useState useRef</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-                        
-                            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Roteiros</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="../../Roteiros/AT/">06 - Análise de Tarefas</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/Aht/">06 - Análise Hierárquica de Tarefas (AHT)</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/DesignThinking/">04 Design Thinking</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/EpicsFeaturesUserStories/">09 - História de Usuário</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/prot%C3%B3tipo/">Protótipo</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/receitas/">Receitas</a>
 </li>
 
         
@@ -297,17 +297,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../10_Fetch/">
+                        <a rel="prev" href="../08_Http/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../12_useState_useRef/">
+                        <a rel="next" href="../10_Fetch/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/React/11_Forms_Props.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/_React/09_Lendo Dados.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -319,138 +319,134 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-formularios-controlados">1. Formulários Controlados</a></li>
-            <li class="second-level"><a href="#exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com useState</a></li>
+        <li class="first-level active"><a href="#1-exibindo-dados-com-const">1. Exibindo dados com const</a></li>
+        <li class="first-level "><a href="#2-exibindo-dados-com-importacao-direta-de-json">2. Exibindo dados com importação direta de JSON</a></li>
+            <li class="second-level"><a href="#passo-1-crie-o-arquivo-json">Passo 1: Crie o arquivo JSON</a></li>
                 
-            <li class="second-level"><a href="#vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</a></li>
+            <li class="second-level"><a href="#passo-2-importe-o-json-no-componente">Passo 2: Importe o JSON no componente</a></li>
                 
-        <li class="first-level "><a href="#2-formularios-nao-controlados">2. Formulários Não Controlados</a></li>
-            <li class="second-level"><a href="#exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com useRef</a></li>
+        <li class="first-level "><a href="#3-exibindo-dados-com-fetch">3. Exibindo dados com fetch</a></li>
+            <li class="second-level"><a href="#passo-1-crie-o-arquivo-json-no-diretorio-public">Passo 1: Crie o arquivo JSON no diretório public</a></li>
                 
-            <li class="second-level"><a href="#vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</a></li>
+            <li class="second-level"><a href="#passo-2-use-fetch-para-buscar-o-arquivo-json">Passo 2: Use fetch para buscar o arquivo JSON</a></li>
                 
-        <li class="first-level "><a href="#3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</a></li>
-        <li class="first-level "><a href="#4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>No React, formulários funcionam de maneira semelhante ao HTML tradicional, mas com algumas diferenças importantes devido ao conceito de <strong>estado</strong> e <strong>eventos controlados</strong>. Em vez de apenas enviar dados ao servidor ao submeter o formulário, o React mantém os valores dos campos de entrada sincronizados com o estado do componente. Isso é feito através de formulários <strong>controlados</strong> e <strong>não controlados</strong>.</p>
-<h3 id="1-formularios-controlados">1. Formulários Controlados</h3>
-<p>Em formulários controlados, o estado do React mantém os valores dos campos. Isso significa que o valor de cada campo é controlado por uma variável no estado do componente, permitindo controle total sobre o que é exibido e processado.</p>
-<h4 id="exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com <code>useState</code></h4>
-<p>Aqui está um exemplo de um formulário de login que usa o estado para controlar os valores dos campos:</p>
-<pre><code class="language-jsx">import React, { useState } from 'react';
+<p>Exibir dados no seu aplicativo Vite com React usando três abordagens diferentes: com <code>const</code>, importação direta e usando <code>fetch</code>.</p>
+<h3 id="1-exibindo-dados-com-const">1. Exibindo dados com <code>const</code></h3>
+<p>Se os dados forem pequenos e você quiser armazená-los diretamente no código, pode usar uma constante.</p>
+<pre><code class="language-jsx">import React from 'react';
 
-function FormularioLogin() {
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
+// Dados armazenados em uma constante
+const users = [
+  { id: 1, name: &quot;John Doe&quot;, email: &quot;john@example.com&quot; },
+  { id: 2, name: &quot;Jane Doe&quot;, email: &quot;jane@example.com&quot; }
+];
 
-  const handleSubmit = (e) =&gt; {
-    e.preventDefault();
-    console.log('Email:', email);
-    console.log('Senha:', senha);
-    // Processar o login
-  };
-
+const App = () =&gt; {
   return (
-    &lt;form onSubmit={handleSubmit}&gt;
-      &lt;label&gt;
-        Email:
-        &lt;input
-          type=&quot;email&quot;
-          value={email}
-          onChange={(e) =&gt; setEmail(e.target.value)}
-        /&gt;
-      &lt;/label&gt;
-      &lt;label&gt;
-        Senha:
-        &lt;input
-          type=&quot;password&quot;
-          value={senha}
-          onChange={(e) =&gt; setSenha(e.target.value)}
-        /&gt;
-      &lt;/label&gt;
-      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
-    &lt;/form&gt;
+    &lt;div&gt;
+      &lt;h1&gt;Users List (Usando Const)&lt;/h1&gt;
+      &lt;ul&gt;
+        {users.map((user) =&gt; (
+          &lt;li key={user.id}&gt;
+            {user.name} - {user.email}
+          &lt;/li&gt;
+        ))}
+      &lt;/ul&gt;
+    &lt;/div&gt;
   );
-}
-
-export default FormularioLogin;
-</code></pre>
-<p>Neste exemplo:</p>
-<ul>
-<li><strong><code>email</code> e <code>senha</code></strong> são estados que armazenam os valores dos campos.</li>
-<li>O <code>onChange</code> atualiza o estado com o valor atual do campo.</li>
-<li>O <code>handleSubmit</code> previne o envio do formulário (<code>e.preventDefault()</code>) e pode ser usado para processar dados ou enviar ao servidor.</li>
-</ul>
-<h4 id="vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</h4>
-<ul>
-<li><strong>Controle Total</strong>: O React controla o estado dos campos, permitindo validações e alterações dinâmicas.</li>
-<li><strong>Validação e Manipulação</strong>: Facilidade em validar campos à medida que o usuário digita.</li>
-<li><strong>Sincronização</strong>: Como os dados dos campos estão no estado, é fácil compartilhar e processar dados em outros componentes.</li>
-</ul>
-<h3 id="2-formularios-nao-controlados">2. Formulários Não Controlados</h3>
-<p>Em formulários não controlados, os valores dos campos não são armazenados no estado, mas diretamente nos elementos do DOM. O React pode acessar o valor do campo diretamente com uma referência (<code>ref</code>) apenas quando necessário.</p>
-<h4 id="exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com <code>useRef</code></h4>
-<p>Aqui está um exemplo de formulário de login usando o <code>useRef</code> para acessar os valores:</p>
-<pre><code class="language-jsx">import React, { useRef } from 'react';
-
-function FormularioLogin() {
-  const emailRef = useRef();
-  const senhaRef = useRef();
-
-  const handleSubmit = (e) =&gt; {
-    e.preventDefault();
-    console.log('Email:', emailRef.current.value);
-    console.log('Senha:', senhaRef.current.value);
-    // Processar o login
-  };
-
-  return (
-    &lt;form onSubmit={handleSubmit}&gt;
-      &lt;label&gt;
-        Email:
-        &lt;input type=&quot;email&quot; ref={emailRef} /&gt;
-      &lt;/label&gt;
-      &lt;label&gt;
-        Senha:
-        &lt;input type=&quot;password&quot; ref={senhaRef} /&gt;
-      &lt;/label&gt;
-      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
-    &lt;/form&gt;
-  );
-}
-
-export default FormularioLogin;
-</code></pre>
-<p>Neste exemplo:</p>
-<ul>
-<li><strong><code>emailRef</code> e <code>senhaRef</code></strong> são referências (<code>useRef</code>) aos elementos de entrada.</li>
-<li>No <code>handleSubmit</code>, <code>emailRef.current.value</code> e <code>senhaRef.current.value</code> acessam o valor dos campos diretamente.</li>
-</ul>
-<h4 id="vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</h4>
-<ul>
-<li><strong>Menos Complexidade</strong>: Útil em formulários simples, sem necessidade de armazenar dados no estado.</li>
-<li><strong>Desempenho</strong>: Em formulários complexos, o React evita re-renderizações ao não monitorar o valor de cada campo.</li>
-</ul>
-<h3 id="3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</h3>
-<ul>
-<li>Use <strong>formulários controlados</strong> quando precisar validar ou manipular dados dinamicamente, ou quando o valor dos campos precisa ser sincronizado com outros estados ou componentes.</li>
-<li>Use <strong>formulários não controlados</strong> para formulários simples, onde o valor é lido apenas na submissão ou em momentos específicos, sem necessidade de interação constante.</li>
-</ul>
-<h3 id="4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</h3>
-<p>Para adicionar validações, use o estado para verificar condições e exibir mensagens conforme necessário:</p>
-<pre><code class="language-jsx">const handleEmailChange = (e) =&gt; {
-  setEmail(e.target.value);
-  if (!e.target.value.includes('@')) {
-    setErroEmail('Email inválido');
-  } else {
-    setErroEmail('');
-  }
 };
+
+export default App;
 </code></pre>
-<p>React facilita a criação de formulários altamente dinâmicos, onde a experiência do usuário é controlada diretamente pelo estado do aplicativo.</p></div>
+<h3 id="2-exibindo-dados-com-importacao-direta-de-json">2. Exibindo dados com importação direta de JSON</h3>
+<p>Se os dados estiverem em um arquivo JSON local, você pode importá-los diretamente.</p>
+<h4 id="passo-1-crie-o-arquivo-json">Passo 1: Crie o arquivo JSON</h4>
+<p>Crie um arquivo <code>data.json</code> (por exemplo) na mesma pasta do seu componente ou dentro da pasta <code>src</code>.</p>
+<pre><code class="language-json">// data.json
+{
+  &quot;users&quot;: [
+    { &quot;id&quot;: 1, &quot;name&quot;: &quot;John Doe&quot;, &quot;email&quot;: &quot;john@example.com&quot; },
+    { &quot;id&quot;: 2, &quot;name&quot;: &quot;Jane Doe&quot;, &quot;email&quot;: &quot;jane@example.com&quot; }
+  ]
+}
+</code></pre>
+<h4 id="passo-2-importe-o-json-no-componente">Passo 2: Importe o JSON no componente</h4>
+<pre><code class="language-jsx">import React from 'react';
+import data from './data.json'; // ajuste o caminho conforme necessário
+
+const App = () =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Users List (Usando Import Direto)&lt;/h1&gt;
+      &lt;ul&gt;
+        {data.users.map((user) =&gt; (
+          &lt;li key={user.id}&gt;
+            {user.name} - {user.email}
+          &lt;/li&gt;
+        ))}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default App;
+</code></pre>
+<h3 id="3-exibindo-dados-com-fetch">3. Exibindo dados com <code>fetch</code></h3>
+<p>Se você quiser buscar dados dinamicamente de um arquivo JSON, você pode usar <code>fetch</code>. Coloque o arquivo JSON na pasta <code>public</code> para que o Vite sirva o arquivo corretamente.</p>
+<h4 id="passo-1-crie-o-arquivo-json-no-diretorio-public">Passo 1: Crie o arquivo JSON no diretório <code>public</code></h4>
+<p>Crie o arquivo <code>public/data.json</code>.</p>
+<pre><code class="language-json">// public/data.json
+{
+  &quot;users&quot;: [
+    { &quot;id&quot;: 1, &quot;name&quot;: &quot;John Doe&quot;, &quot;email&quot;: &quot;john@example.com&quot; },
+    { &quot;id&quot;: 2, &quot;name&quot;: &quot;Jane Doe&quot;, &quot;email&quot;: &quot;jane@example.com&quot; }
+  ]
+}
+</code></pre>
+<h4 id="passo-2-use-fetch-para-buscar-o-arquivo-json">Passo 2: Use <code>fetch</code> para buscar o arquivo JSON</h4>
+<pre><code class="language-jsx">import React, { useState, useEffect } from 'react';
+
+const App = () =&gt; {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&gt; {
+    fetch('/data.json') // Caminho relativo ao diretório public
+      .then((response) =&gt; response.json())
+      .then((data) =&gt; {
+        setData(data);
+        setLoading(false);
+      })
+      .catch((error) =&gt; {
+        console.error('Erro ao carregar dados:', error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return &lt;div&gt;Loading...&lt;/div&gt;;
+  }
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Users List (Usando Fetch)&lt;/h1&gt;
+      &lt;ul&gt;
+        {data.users.map((user) =&gt; (
+          &lt;li key={user.id}&gt;
+            {user.name} - {user.email}
+          &lt;/li&gt;
+        ))}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default App;
+</code></pre></div>
         
         
     </div>

@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>09 Lendo Dados - PFE_25.1_8003</title>
+    <title>12 useState useRef - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -105,7 +105,52 @@
                         
                             
   <li class="dropdown-submenu">
-    <a tabindex="-1" href="">React</a>
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Roteiros/AT/">06 - Análise de Tarefas</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/Aht/">06 - Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/DesignThinking/">04 Design Thinking</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/EpicsFeaturesUserStories/">09 - História de Usuário</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/receitas/">Receitas</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href=""> React</a>
     <ul class="dropdown-menu">
         
             
@@ -157,8 +202,8 @@
 
         
             
-<li class="active">
-    <a href="./">09 Lendo Dados</a>
+<li >
+    <a href="../09_Lendo%20Dados/">09 Lendo Dados</a>
 </li>
 
         
@@ -175,53 +220,8 @@
 
         
             
-<li >
-    <a href="../12_useState_useRef/">12 useState useRef</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-                        
-                            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Roteiros</a>
-    <ul class="dropdown-menu">
-        
-            
-<li >
-    <a href="../../Roteiros/AT/">06 - Análise de Tarefas</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/Aht/">06 - Análise Hierárquica de Tarefas (AHT)</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/DesignThinking/">04 Design Thinking</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/EpicsFeaturesUserStories/">09 - História de Usuário</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/prot%C3%B3tipo/">Protótipo</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/receitas/">Receitas</a>
+<li class="active">
+    <a href="./">12 useState useRef</a>
 </li>
 
         
@@ -297,17 +297,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../08_Http/">
+                        <a rel="prev" href="../11_Forms_Props/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../10_Fetch/">
+                        <a rel="next" href="../../../_Design%20Thinking/5w2h/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/React/09_Lendo Dados.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/_React/12_useState_useRef.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -319,134 +319,139 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-exibindo-dados-com-const">1. Exibindo dados com const</a></li>
-        <li class="first-level "><a href="#2-exibindo-dados-com-importacao-direta-de-json">2. Exibindo dados com importação direta de JSON</a></li>
-            <li class="second-level"><a href="#passo-1-crie-o-arquivo-json">Passo 1: Crie o arquivo JSON</a></li>
+        <li class="first-level active"><a href="#1-usestate">1. useState</a></li>
+            <li class="second-level"><a href="#como-usestate-funciona">Como useState Funciona</a></li>
                 
-            <li class="second-level"><a href="#passo-2-importe-o-json-no-componente">Passo 2: Importe o JSON no componente</a></li>
+            <li class="second-level"><a href="#exemplo-simples">Exemplo Simples</a></li>
                 
-        <li class="first-level "><a href="#3-exibindo-dados-com-fetch">3. Exibindo dados com fetch</a></li>
-            <li class="second-level"><a href="#passo-1-crie-o-arquivo-json-no-diretorio-public">Passo 1: Crie o arquivo JSON no diretório public</a></li>
+            <li class="second-level"><a href="#explicacao">Explicação</a></li>
                 
-            <li class="second-level"><a href="#passo-2-use-fetch-para-buscar-o-arquivo-json">Passo 2: Use fetch para buscar o arquivo JSON</a></li>
+            <li class="second-level"><a href="#vantagens-do-usestate">Vantagens do useState</a></li>
                 
+        <li class="first-level "><a href="#2-useref">2. useRef</a></li>
+            <li class="second-level"><a href="#como-useref-funciona">Como useRef Funciona</a></li>
+                
+            <li class="second-level"><a href="#exemplo-com-useref">Exemplo com useRef</a></li>
+                
+            <li class="second-level"><a href="#explicacao_1">Explicação</a></li>
+                
+        <li class="first-level "><a href="#diferenca-entre-usestate-e-useref">Diferença entre useState e useRef</a></li>
+        <li class="first-level "><a href="#quando-usar-cada-um">Quando Usar Cada Um</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>Exibir dados no seu aplicativo Vite com React usando três abordagens diferentes: com <code>const</code>, importação direta e usando <code>fetch</code>.</p>
-<h3 id="1-exibindo-dados-com-const">1. Exibindo dados com <code>const</code></h3>
-<p>Se os dados forem pequenos e você quiser armazená-los diretamente no código, pode usar uma constante.</p>
-<pre><code class="language-jsx">import React from 'react';
+<p>No React, <code>useState</code> e <code>useRef</code> são hooks que ajudam a gerenciar e manipular o estado e referências de um componente funcional. Eles têm finalidades diferentes, mas ambos são essenciais para construir interfaces dinâmicas.</p>
+<h3 id="1-usestate">1. <code>useState</code></h3>
+<p>O hook <code>useState</code> é usado para adicionar e manipular estados em componentes funcionais. O React monitora as mudanças de estado e, quando elas ocorrem, re-renderiza o componente para refletir o novo estado.</p>
+<h4 id="como-usestate-funciona">Como <code>useState</code> Funciona</h4>
+<ul>
+<li>Ao declarar uma variável de estado com <code>useState</code>, ela retorna um <strong>array</strong> com dois elementos:</li>
+<li>O valor atual do estado.</li>
+<li>Uma função que permite atualizar o valor do estado.</li>
+</ul>
+<h4 id="exemplo-simples">Exemplo Simples</h4>
+<p>Aqui, <code>useState</code> é usado para controlar o número de cliques em um botão:</p>
+<pre><code class="language-jsx">import React, { useState } from 'react';
 
-// Dados armazenados em uma constante
-const users = [
-  { id: 1, name: &quot;John Doe&quot;, email: &quot;john@example.com&quot; },
-  { id: 2, name: &quot;Jane Doe&quot;, email: &quot;jane@example.com&quot; }
-];
+function Contador() {
+  const [contador, setContador] = useState(0);
 
-const App = () =&gt; {
+  const incrementar = () =&gt; {
+    setContador(contador + 1);
+  };
+
   return (
     &lt;div&gt;
-      &lt;h1&gt;Users List (Usando Const)&lt;/h1&gt;
-      &lt;ul&gt;
-        {users.map((user) =&gt; (
-          &lt;li key={user.id}&gt;
-            {user.name} - {user.email}
-          &lt;/li&gt;
-        ))}
-      &lt;/ul&gt;
+      &lt;p&gt;Você clicou {contador} vezes&lt;/p&gt;
+      &lt;button onClick={incrementar}&gt;Clique aqui&lt;/button&gt;
     &lt;/div&gt;
   );
-};
-
-export default App;
-</code></pre>
-<h3 id="2-exibindo-dados-com-importacao-direta-de-json">2. Exibindo dados com importação direta de JSON</h3>
-<p>Se os dados estiverem em um arquivo JSON local, você pode importá-los diretamente.</p>
-<h4 id="passo-1-crie-o-arquivo-json">Passo 1: Crie o arquivo JSON</h4>
-<p>Crie um arquivo <code>data.json</code> (por exemplo) na mesma pasta do seu componente ou dentro da pasta <code>src</code>.</p>
-<pre><code class="language-json">// data.json
-{
-  &quot;users&quot;: [
-    { &quot;id&quot;: 1, &quot;name&quot;: &quot;John Doe&quot;, &quot;email&quot;: &quot;john@example.com&quot; },
-    { &quot;id&quot;: 2, &quot;name&quot;: &quot;Jane Doe&quot;, &quot;email&quot;: &quot;jane@example.com&quot; }
-  ]
 }
-</code></pre>
-<h4 id="passo-2-importe-o-json-no-componente">Passo 2: Importe o JSON no componente</h4>
-<pre><code class="language-jsx">import React from 'react';
-import data from './data.json'; // ajuste o caminho conforme necessário
 
-const App = () =&gt; {
+export default Contador;
+</code></pre>
+<h4 id="explicacao">Explicação</h4>
+<ul>
+<li><strong>Valor Inicial</strong>: <code>useState(0)</code> define <code>contador</code> com o valor inicial de <code>0</code>.</li>
+<li><strong>Atualização de Estado</strong>: <code>setContador(contador + 1)</code> incrementa o valor de <code>contador</code> em 1 cada vez que o botão é clicado.</li>
+<li><strong>Re-renderização</strong>: Toda vez que <code>contador</code> é atualizado, o React re-renderiza o componente para refletir a nova contagem.</li>
+</ul>
+<h4 id="vantagens-do-usestate">Vantagens do <code>useState</code></h4>
+<ul>
+<li><strong>Reatividade</strong>: Garante que o componente sempre mostre o estado mais recente.</li>
+<li><strong>Controle Total</strong>: Ideal para variáveis que afetam a renderização e a interface, como valores de input, exibições de mensagens, entre outros.</li>
+</ul>
+<h3 id="2-useref">2. <code>useRef</code></h3>
+<p>O hook <code>useRef</code> é usado para criar uma <strong>referência mutável</strong> que persiste entre renderizações de um componente, mas <strong>não provoca re-renderização</strong> quando atualizado. Isso é útil para manipular elementos do DOM diretamente ou para armazenar valores que não precisam desencadear uma re-renderização.</p>
+<h4 id="como-useref-funciona">Como <code>useRef</code> Funciona</h4>
+<ul>
+<li><code>useRef</code> retorna um objeto com uma propriedade <code>.current</code>, que é inicializada com o valor passado como argumento e que pode ser atualizado sem afetar a renderização do componente.</li>
+</ul>
+<h4 id="exemplo-com-useref">Exemplo com <code>useRef</code></h4>
+<p>Aqui está um exemplo em que <code>useRef</code> é usado para referenciar um campo de entrada:</p>
+<pre><code class="language-jsx">import React, { useRef } from 'react';
+
+function FocoInput() {
+  const inputRef = useRef(null);
+
+  const focarInput = () =&gt; {
+    inputRef.current.focus();
+  };
+
   return (
     &lt;div&gt;
-      &lt;h1&gt;Users List (Usando Import Direto)&lt;/h1&gt;
-      &lt;ul&gt;
-        {data.users.map((user) =&gt; (
-          &lt;li key={user.id}&gt;
-            {user.name} - {user.email}
-          &lt;/li&gt;
-        ))}
-      &lt;/ul&gt;
+      &lt;input ref={inputRef} type=&quot;text&quot; placeholder=&quot;Clique para focar&quot; /&gt;
+      &lt;button onClick={focarInput}&gt;Focar no input&lt;/button&gt;
     &lt;/div&gt;
   );
-};
-
-export default App;
-</code></pre>
-<h3 id="3-exibindo-dados-com-fetch">3. Exibindo dados com <code>fetch</code></h3>
-<p>Se você quiser buscar dados dinamicamente de um arquivo JSON, você pode usar <code>fetch</code>. Coloque o arquivo JSON na pasta <code>public</code> para que o Vite sirva o arquivo corretamente.</p>
-<h4 id="passo-1-crie-o-arquivo-json-no-diretorio-public">Passo 1: Crie o arquivo JSON no diretório <code>public</code></h4>
-<p>Crie o arquivo <code>public/data.json</code>.</p>
-<pre><code class="language-json">// public/data.json
-{
-  &quot;users&quot;: [
-    { &quot;id&quot;: 1, &quot;name&quot;: &quot;John Doe&quot;, &quot;email&quot;: &quot;john@example.com&quot; },
-    { &quot;id&quot;: 2, &quot;name&quot;: &quot;Jane Doe&quot;, &quot;email&quot;: &quot;jane@example.com&quot; }
-  ]
 }
+
+export default FocoInput;
 </code></pre>
-<h4 id="passo-2-use-fetch-para-buscar-o-arquivo-json">Passo 2: Use <code>fetch</code> para buscar o arquivo JSON</h4>
-<pre><code class="language-jsx">import React, { useState, useEffect } from 'react';
-
-const App = () =&gt; {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() =&gt; {
-    fetch('/data.json') // Caminho relativo ao diretório public
-      .then((response) =&gt; response.json())
-      .then((data) =&gt; {
-        setData(data);
-        setLoading(false);
-      })
-      .catch((error) =&gt; {
-        console.error('Erro ao carregar dados:', error);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
-    return &lt;div&gt;Loading...&lt;/div&gt;;
-  }
-
-  return (
-    &lt;div&gt;
-      &lt;h1&gt;Users List (Usando Fetch)&lt;/h1&gt;
-      &lt;ul&gt;
-        {data.users.map((user) =&gt; (
-          &lt;li key={user.id}&gt;
-            {user.name} - {user.email}
-          &lt;/li&gt;
-        ))}
-      &lt;/ul&gt;
-    &lt;/div&gt;
-  );
-};
-
-export default App;
-</code></pre></div>
+<h4 id="explicacao_1">Explicação</h4>
+<ul>
+<li><strong>Referência ao DOM</strong>: <code>useRef(null)</code> cria uma referência vazia. <code>inputRef.current</code> é associado ao campo de entrada com <code>ref={inputRef}</code>.</li>
+<li><strong>Manipulação Direta do DOM</strong>: <code>inputRef.current.focus()</code> permite que o botão “Focar no input” posicione o cursor no campo de entrada.</li>
+</ul>
+<h3 id="diferenca-entre-usestate-e-useref">Diferença entre <code>useState</code> e <code>useRef</code></h3>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th><code>useState</code></th>
+<th><code>useRef</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provoca re-renderização</td>
+<td>Sim, ao atualizar o estado</td>
+<td>Não, as mudanças em <code>.current</code> não causam render</td>
+</tr>
+<tr>
+<td>Finalidade</td>
+<td>Gerenciar dados que afetam a renderização</td>
+<td>Referenciar elementos do DOM ou armazenar dados temporários</td>
+</tr>
+<tr>
+<td>Persistência</td>
+<td>Entre re-renderizações</td>
+<td>Entre re-renderizações</td>
+</tr>
+<tr>
+<td>Uso comum</td>
+<td>Campos de formulário, contadores, flags</td>
+<td>Foco em elementos, armazenar IDs de intervalos, variáveis imutáveis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quando-usar-cada-um">Quando Usar Cada Um</h3>
+<ul>
+<li><strong><code>useState</code></strong> é ideal para dados que impactam a interface e exigem uma atualização visível.</li>
+<li><strong><code>useRef</code></strong> é útil para manipulação direta de elementos DOM ou armazenamento de dados que não devem afetar a renderização.</li>
+</ul>
+<p>Esses hooks complementam a lógica do React, permitindo criar componentes interativos e performáticos com um bom gerenciamento de estado e referências.</p></div>
         
         
     </div>

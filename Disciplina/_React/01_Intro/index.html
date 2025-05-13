@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>12 useState useRef - PFE_25.1_8003</title>
+    <title>01 - Introdução ao React com HTML e CDN - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -105,12 +105,57 @@
                         
                             
   <li class="dropdown-submenu">
-    <a tabindex="-1" href="">React</a>
+    <a tabindex="-1" href="">Roteiros</a>
     <ul class="dropdown-menu">
         
             
 <li >
-    <a href="../01_Intro/">01 - Introdução ao React com HTML e CDN</a>
+    <a href="../../Roteiros/AT/">06 - Análise de Tarefas</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/Aht/">06 - Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/DesignThinking/">04 Design Thinking</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/EpicsFeaturesUserStories/">09 - História de Usuário</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Roteiros/receitas/">Receitas</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href=""> React</a>
+    <ul class="dropdown-menu">
+        
+            
+<li class="active">
+    <a href="./">01 - Introdução ao React com HTML e CDN</a>
 </li>
 
         
@@ -175,53 +220,8 @@
 
         
             
-<li class="active">
-    <a href="./">12 useState useRef</a>
-</li>
-
-        
-    </ul>
-  </li>
-
-                        
-                            
-  <li class="dropdown-submenu">
-    <a tabindex="-1" href="">Roteiros</a>
-    <ul class="dropdown-menu">
-        
-            
 <li >
-    <a href="../../Roteiros/AT/">06 - Análise de Tarefas</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/Aht/">06 - Análise Hierárquica de Tarefas (AHT)</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/DesignThinking/">04 Design Thinking</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/EpicsFeaturesUserStories/">09 - História de Usuário</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/prot%C3%B3tipo/">Protótipo</a>
-</li>
-
-        
-            
-<li >
-    <a href="../../Roteiros/receitas/">Receitas</a>
+    <a href="../12_useState_useRef/">12 useState useRef</a>
 </li>
 
         
@@ -297,17 +297,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../11_Forms_Props/">
+                        <a rel="prev" href="../../Roteiros/receitas/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../Roteiros/AT/">
+                        <a rel="next" href="../02_NodeViteReact/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/React/12_useState_useRef.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/_React/01_Intro.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -319,139 +319,72 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-usestate">1. useState</a></li>
-            <li class="second-level"><a href="#como-usestate-funciona">Como useState Funciona</a></li>
+        <li class="first-level active"><a href="#01-introducao-ao-react-com-html-e-cdn">01 - Introdução ao React com HTML e CDN</a></li>
+            <li class="second-level"><a href="#objetivo">Objetivo</a></li>
                 
-            <li class="second-level"><a href="#exemplo-simples">Exemplo Simples</a></li>
-                
-            <li class="second-level"><a href="#explicacao">Explicação</a></li>
-                
-            <li class="second-level"><a href="#vantagens-do-usestate">Vantagens do useState</a></li>
-                
-        <li class="first-level "><a href="#2-useref">2. useRef</a></li>
-            <li class="second-level"><a href="#como-useref-funciona">Como useRef Funciona</a></li>
-                
-            <li class="second-level"><a href="#exemplo-com-useref">Exemplo com useRef</a></li>
-                
-            <li class="second-level"><a href="#explicacao_1">Explicação</a></li>
-                
-        <li class="first-level "><a href="#diferenca-entre-usestate-e-useref">Diferença entre useState e useRef</a></li>
-        <li class="first-level "><a href="#quando-usar-cada-um">Quando Usar Cada Um</a></li>
+                <li class="third-level"><a href="#estrutura-do-roteiro">Estrutura do Roteiro:</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>No React, <code>useState</code> e <code>useRef</code> são hooks que ajudam a gerenciar e manipular o estado e referências de um componente funcional. Eles têm finalidades diferentes, mas ambos são essenciais para construir interfaces dinâmicas.</p>
-<h3 id="1-usestate">1. <code>useState</code></h3>
-<p>O hook <code>useState</code> é usado para adicionar e manipular estados em componentes funcionais. O React monitora as mudanças de estado e, quando elas ocorrem, re-renderiza o componente para refletir o novo estado.</p>
-<h4 id="como-usestate-funciona">Como <code>useState</code> Funciona</h4>
+<h1 id="01-introducao-ao-react-com-html-e-cdn">01 - Introdução ao React com HTML e CDN</h1>
+<h2 id="objetivo">Objetivo</h2>
+<p>Apresentar os conceitos básicos do React e como integrá-lo em uma página HTML utilizando um link para a CDN, sem a necessidade de um ambiente de desenvolvimento local como o Node.js.</p>
+<hr />
+<h3 id="estrutura-do-roteiro"><strong>Estrutura do Roteiro:</strong></h3>
+<h4 id="1-introducao-ao-react"><strong>1. Introdução ao React</strong></h4>
 <ul>
-<li>Ao declarar uma variável de estado com <code>useState</code>, ela retorna um <strong>array</strong> com dois elementos:</li>
-<li>O valor atual do estado.</li>
-<li>Uma função que permite atualizar o valor do estado.</li>
+<li><strong>Definição</strong>: React é uma biblioteca JavaScript criada pelo Facebook para criar interfaces de usuário de forma declarativa e eficiente.</li>
+<li><strong>Vantagens</strong>:</li>
+<li>Componentes reutilizáveis.</li>
+<li>Atualizações rápidas do DOM (Virtual DOM).</li>
+<li>Facilita a criação de Single Page Applications (SPAs).</li>
 </ul>
-<h4 id="exemplo-simples">Exemplo Simples</h4>
-<p>Aqui, <code>useState</code> é usado para controlar o número de cliques em um botão:</p>
-<pre><code class="language-jsx">import React, { useState } from 'react';
+<hr />
+<h4 id="2-preparando-o-ambiente">2. Preparando o Ambiente</h4>
+<ul>
+<li>Não é necessário instalar nada localmente para este exemplo inicial, vamos usar uma página HTML e um link para a biblioteca via CDN.</li>
+</ul>
+<hr />
+<h4 id="3-estrutura-basica-do-projeto"><strong>3. Estrutura Básica do Projeto</strong></h4>
+<ul>
+<li>
+<p><strong>HTML Básico</strong></p>
+</li>
+<li>
+<p>Comece com a criação de uma página HTML simples contendo um elemento <code>&lt;div&gt;</code> que será usado como “ponto de montagem” para o React.</p>
+</li>
+</ul>
+<pre><code class="language-html">   &lt;!DOCTYPE html&gt;
+   &lt;html lang=&quot;en&quot;&gt;
+   &lt;head&gt;
+     &lt;meta charset=&quot;UTF-8&quot;&gt;
+     &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+     &lt;title&gt;React Introdução&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;!-- Div onde o React renderizará o conteúdo --&gt;
+     &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
 
-function Contador() {
-  const [contador, setContador] = useState(0);
-
-  const incrementar = () =&gt; {
-    setContador(contador + 1);
-  };
-
-  return (
-    &lt;div&gt;
-      &lt;p&gt;Você clicou {contador} vezes&lt;/p&gt;
-      &lt;button onClick={incrementar}&gt;Clique aqui&lt;/button&gt;
-    &lt;/div&gt;
-  );
-}
-
-export default Contador;
+     &lt;!-- Scripts do React via CDN --&gt;
+     &lt;script src=&quot;https://unpkg.com/react@17/umd/react.production.min.js&quot; crossorigin&gt;&lt;/script&gt;
+     &lt;script src=&quot;https://unpkg.com/react-dom@17/umd/react-dom.production.min.js&quot; crossorigin&gt;&lt;/script&gt;
+     &lt;!-- Nosso script JavaScript --&gt;
+     &lt;script src=&quot;app.js&quot;&gt;&lt;/script&gt;
+   &lt;/body&gt;
+   &lt;/html&gt;
 </code></pre>
-<h4 id="explicacao">Explicação</h4>
-<ul>
-<li><strong>Valor Inicial</strong>: <code>useState(0)</code> define <code>contador</code> com o valor inicial de <code>0</code>.</li>
-<li><strong>Atualização de Estado</strong>: <code>setContador(contador + 1)</code> incrementa o valor de <code>contador</code> em 1 cada vez que o botão é clicado.</li>
-<li><strong>Re-renderização</strong>: Toda vez que <code>contador</code> é atualizado, o React re-renderiza o componente para refletir a nova contagem.</li>
-</ul>
-<h4 id="vantagens-do-usestate">Vantagens do <code>useState</code></h4>
-<ul>
-<li><strong>Reatividade</strong>: Garante que o componente sempre mostre o estado mais recente.</li>
-<li><strong>Controle Total</strong>: Ideal para variáveis que afetam a renderização e a interface, como valores de input, exibições de mensagens, entre outros.</li>
-</ul>
-<h3 id="2-useref">2. <code>useRef</code></h3>
-<p>O hook <code>useRef</code> é usado para criar uma <strong>referência mutável</strong> que persiste entre renderizações de um componente, mas <strong>não provoca re-renderização</strong> quando atualizado. Isso é útil para manipular elementos do DOM diretamente ou para armazenar valores que não precisam desencadear uma re-renderização.</p>
-<h4 id="como-useref-funciona">Como <code>useRef</code> Funciona</h4>
-<ul>
-<li><code>useRef</code> retorna um objeto com uma propriedade <code>.current</code>, que é inicializada com o valor passado como argumento e que pode ser atualizado sem afetar a renderização do componente.</li>
-</ul>
-<h4 id="exemplo-com-useref">Exemplo com <code>useRef</code></h4>
-<p>Aqui está um exemplo em que <code>useRef</code> é usado para referenciar um campo de entrada:</p>
-<pre><code class="language-jsx">import React, { useRef } from 'react';
-
-function FocoInput() {
-  const inputRef = useRef(null);
-
-  const focarInput = () =&gt; {
-    inputRef.current.focus();
-  };
-
-  return (
-    &lt;div&gt;
-      &lt;input ref={inputRef} type=&quot;text&quot; placeholder=&quot;Clique para focar&quot; /&gt;
-      &lt;button onClick={focarInput}&gt;Focar no input&lt;/button&gt;
-    &lt;/div&gt;
-  );
-}
-
-export default FocoInput;
-</code></pre>
-<h4 id="explicacao_1">Explicação</h4>
-<ul>
-<li><strong>Referência ao DOM</strong>: <code>useRef(null)</code> cria uma referência vazia. <code>inputRef.current</code> é associado ao campo de entrada com <code>ref={inputRef}</code>.</li>
-<li><strong>Manipulação Direta do DOM</strong>: <code>inputRef.current.focus()</code> permite que o botão “Focar no input” posicione o cursor no campo de entrada.</li>
-</ul>
-<h3 id="diferenca-entre-usestate-e-useref">Diferença entre <code>useState</code> e <code>useRef</code></h3>
-<table>
-<thead>
-<tr>
-<th>Característica</th>
-<th><code>useState</code></th>
-<th><code>useRef</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Provoca re-renderização</td>
-<td>Sim, ao atualizar o estado</td>
-<td>Não, as mudanças em <code>.current</code> não causam render</td>
-</tr>
-<tr>
-<td>Finalidade</td>
-<td>Gerenciar dados que afetam a renderização</td>
-<td>Referenciar elementos do DOM ou armazenar dados temporários</td>
-</tr>
-<tr>
-<td>Persistência</td>
-<td>Entre re-renderizações</td>
-<td>Entre re-renderizações</td>
-</tr>
-<tr>
-<td>Uso comum</td>
-<td>Campos de formulário, contadores, flags</td>
-<td>Foco em elementos, armazenar IDs de intervalos, variáveis imutáveis</td>
-</tr>
-</tbody>
-</table>
-<h3 id="quando-usar-cada-um">Quando Usar Cada Um</h3>
-<ul>
-<li><strong><code>useState</code></strong> é ideal para dados que impactam a interface e exigem uma atualização visível.</li>
-<li><strong><code>useRef</code></strong> é útil para manipulação direta de elementos DOM ou armazenamento de dados que não devem afetar a renderização.</li>
-</ul>
-<p>Esses hooks complementam a lógica do React, permitindo criar componentes interativos e performáticos com um bom gerenciamento de estado e referências.</p></div>
+<hr />
+<h4 id="4-criando-um-elemento-react">4. Criando um Elemento React</h4>
+<p>Crie o arquivo <code>app.js</code> com o seguinte código:</p>
+<pre><code class="language-javascript">   ReactDOM.render(
+    React.createElement(
+        'h1',
+        null,
+        'Hello, World!'
+    ),
+    document.getElementById('root'))
+</code></pre></div>
         
         
     </div>
