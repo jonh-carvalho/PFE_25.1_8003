@@ -29,15 +29,15 @@
 3\. **Estrutura de pastas**:
    Ao concluir, a estrutura do projeto será algo como:
 
-```txt
-  public
-  src
-    assets
-    App.jsx
-    main.jsx
-    index.css
-    index.html
-    vite.config.js
+```text
+public
+src
+  assets
+  App.jsx
+  main.jsx
+  index.css
+  index.html
+  vite.config.js
 ```
 
 4\. **Iniciar o servidor de desenvolvimento**:

@@ -1,4 +1,4 @@
-# 03 - **O que é um App React SPA**
+# 03 - **Criando um App React SPA**
 
 ## Introdução
 
@@ -72,7 +72,7 @@ Antes de propormos uma estrutura para o SPA, é importante entender alguns detal
 
 Com base em um cenário geral, podemos propor uma estrutura básica para o SPA:
 
-```text
+```
   my-event-app/
    public/
    index.html
@@ -166,7 +166,8 @@ function EventCard({ title, date, description }) {
       `<p>`{description}`</p>`
     `</div>`
   );
-} 
+}
+
 export default EventCard;
 ```
 
