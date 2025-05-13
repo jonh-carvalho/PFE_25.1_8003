@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../../img/favicon.ico">
 
     
-    <title>11 useState useRef - PFE_25.1_8003</title>
+    <title>10 Fetch - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -122,7 +122,7 @@
         
             
 <li >
-    <a href="../03_Spa/">03 - O que é um App React SPA</a>
+    <a href="../03_Spa/">03 - Criando um App React SPA</a>
 </li>
 
         
@@ -140,43 +140,43 @@
         
             
 <li >
-    <a href="../06_Http/">06 Http</a>
+    <a href="../06_Estilizando%20React/">06 - Estilizar um app React</a>
 </li>
 
         
             
 <li >
-    <a href="../07_Fetch/">07 Fetch</a>
+    <a href="../07_Props/">07 - Props</a>
 </li>
 
         
             
 <li >
-    <a href="../07_Lendo%20Json/">07 Lendo Json</a>
+    <a href="../08_Http/">08 - Protocolo HTTP</a>
 </li>
 
         
             
 <li >
-    <a href="../08_Estilizando%20React/">08 Estilizando React</a>
-</li>
-
-        
-            
-<li >
-    <a href="../09_Props/">09 Props</a>
-</li>
-
-        
-            
-<li >
-    <a href="../10_Forms_Props/">10 Forms Props</a>
+    <a href="../09_Lendo%20Dados/">09 Lendo Dados</a>
 </li>
 
         
             
 <li class="active">
-    <a href="./">11 useState useRef</a>
+    <a href="./">10 Fetch</a>
+</li>
+
+        
+            
+<li >
+    <a href="../11_Forms_Props/">11 Forms Props</a>
+</li>
+
+        
+            
+<li >
+    <a href="../12_useState_useRef/">12 useState useRef</a>
 </li>
 
         
@@ -297,17 +297,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../10_Forms_Props/">
+                        <a rel="prev" href="../09_Lendo%20Dados/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../Roteiros/AT/">
+                        <a rel="next" href="../11_Forms_Props/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/React/11_useState_useRef.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/Disciplina/React/10_Fetch.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -319,139 +319,78 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#1-usestate">1. useState</a></li>
-            <li class="second-level"><a href="#como-usestate-funciona">Como useState Funciona</a></li>
-                
-            <li class="second-level"><a href="#exemplo-simples">Exemplo Simples</a></li>
-                
-            <li class="second-level"><a href="#explicacao">Explicação</a></li>
-                
-            <li class="second-level"><a href="#vantagens-do-usestate">Vantagens do useState</a></li>
-                
-        <li class="first-level "><a href="#2-useref">2. useRef</a></li>
-            <li class="second-level"><a href="#como-useref-funciona">Como useRef Funciona</a></li>
-                
-            <li class="second-level"><a href="#exemplo-com-useref">Exemplo com useRef</a></li>
-                
-            <li class="second-level"><a href="#explicacao_1">Explicação</a></li>
-                
-        <li class="first-level "><a href="#diferenca-entre-usestate-e-useref">Diferença entre useState e useRef</a></li>
-        <li class="first-level "><a href="#quando-usar-cada-um">Quando Usar Cada Um</a></li>
+        <li class="first-level active"><a href="#caracteristicas-principais-do-fetch">Características principais do fetch:</a></li>
+        <li class="first-level "><a href="#exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do fetch:</a></li>
+        <li class="first-level "><a href="#um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o fetch com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</a></li>
+        <li class="first-level "><a href="#exemplo-de-requisicao-get">Exemplo de requisição GET</a></li>
+        <li class="first-level "><a href="#exemplo-de-requisicao-post">Exemplo de requisição POST</a></li>
+        <li class="first-level "><a href="#explicacao">Explicação:</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<p>No React, <code>useState</code> e <code>useRef</code> são hooks que ajudam a gerenciar e manipular o estado e referências de um componente funcional. Eles têm finalidades diferentes, mas ambos são essenciais para construir interfaces dinâmicas.</p>
-<h3 id="1-usestate">1. <code>useState</code></h3>
-<p>O hook <code>useState</code> é usado para adicionar e manipular estados em componentes funcionais. O React monitora as mudanças de estado e, quando elas ocorrem, re-renderiza o componente para refletir o novo estado.</p>
-<h4 id="como-usestate-funciona">Como <code>useState</code> Funciona</h4>
-<ul>
-<li>Ao declarar uma variável de estado com <code>useState</code>, ela retorna um <strong>array</strong> com dois elementos:</li>
-<li>O valor atual do estado.</li>
-<li>Uma função que permite atualizar o valor do estado.</li>
-</ul>
-<h4 id="exemplo-simples">Exemplo Simples</h4>
-<p>Aqui, <code>useState</code> é usado para controlar o número de cliques em um botão:</p>
-<pre><code class="language-jsx">import React, { useState } from 'react';
-
-function Contador() {
-  const [contador, setContador] = useState(0);
-
-  const incrementar = () =&gt; {
-    setContador(contador + 1);
-  };
-
-  return (
-    &lt;div&gt;
-      &lt;p&gt;Você clicou {contador} vezes&lt;/p&gt;
-      &lt;button onClick={incrementar}&gt;Clique aqui&lt;/button&gt;
-    &lt;/div&gt;
-  );
-}
-
-export default Contador;
+<p><code>fetch</code> é uma API nativa do JavaScript que permite realizar requisições HTTP de forma simples e moderna. Ela é usada principalmente para buscar (ou "fetch") recursos de um servidor, como dados de uma API, arquivos ou outros tipos de conteúdo. O <code>fetch</code> retorna uma <em>Promise</em>, o que significa que ele trabalha de forma assíncrona, permitindo que o JavaScript continue a executar outras operações enquanto a requisição está em andamento.</p>
+<h3 id="caracteristicas-principais-do-fetch">Características principais do <code>fetch</code>:</h3>
+<ol>
+<li><strong>Simplicidade</strong>: Comparado ao antigo <code>XMLHttpRequest</code>, o <code>fetch</code> possui uma sintaxe muito mais fácil de usar.</li>
+<li><strong>Promessas (Promises)</strong>: O <code>fetch</code> retorna uma <code>Promise</code>, o que facilita o tratamento de operações assíncronas.</li>
+<li><strong>Suporte a múltiplos métodos HTTP</strong>: Pode ser usado para diferentes tipos de requisições, como <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, etc.</li>
+<li><strong>Configuração flexível</strong>: Permite configurar cabeçalhos, enviar dados no corpo da requisição, e muito mais.</li>
+</ol>
+<h3 id="exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do <code>fetch</code>:</h3>
+<pre><code class="language-javascript">fetch('https://api.exemplo.com/dados')
+  .then(response =&gt; response.json())  // Converte a resposta para JSON
+  .then(data =&gt; console.log(data))    // Exibe os dados no console
+  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
 </code></pre>
-<h4 id="explicacao">Explicação</h4>
-<ul>
-<li><strong>Valor Inicial</strong>: <code>useState(0)</code> define <code>contador</code> com o valor inicial de <code>0</code>.</li>
-<li><strong>Atualização de Estado</strong>: <code>setContador(contador + 1)</code> incrementa o valor de <code>contador</code> em 1 cada vez que o botão é clicado.</li>
-<li><strong>Re-renderização</strong>: Toda vez que <code>contador</code> é atualizado, o React re-renderiza o componente para refletir a nova contagem.</li>
-</ul>
-<h4 id="vantagens-do-usestate">Vantagens do <code>useState</code></h4>
-<ul>
-<li><strong>Reatividade</strong>: Garante que o componente sempre mostre o estado mais recente.</li>
-<li><strong>Controle Total</strong>: Ideal para variáveis que afetam a renderização e a interface, como valores de input, exibições de mensagens, entre outros.</li>
-</ul>
-<h3 id="2-useref">2. <code>useRef</code></h3>
-<p>O hook <code>useRef</code> é usado para criar uma <strong>referência mutável</strong> que persiste entre renderizações de um componente, mas <strong>não provoca re-renderização</strong> quando atualizado. Isso é útil para manipular elementos do DOM diretamente ou para armazenar valores que não precisam desencadear uma re-renderização.</p>
-<h4 id="como-useref-funciona">Como <code>useRef</code> Funciona</h4>
-<ul>
-<li><code>useRef</code> retorna um objeto com uma propriedade <code>.current</code>, que é inicializada com o valor passado como argumento e que pode ser atualizado sem afetar a renderização do componente.</li>
-</ul>
-<h4 id="exemplo-com-useref">Exemplo com <code>useRef</code></h4>
-<p>Aqui está um exemplo em que <code>useRef</code> é usado para referenciar um campo de entrada:</p>
-<pre><code class="language-jsx">import React, { useRef } from 'react';
-
-function FocoInput() {
-  const inputRef = useRef(null);
-
-  const focarInput = () =&gt; {
-    inputRef.current.focus();
-  };
-
-  return (
-    &lt;div&gt;
-      &lt;input ref={inputRef} type=&quot;text&quot; placeholder=&quot;Clique para focar&quot; /&gt;
-      &lt;button onClick={focarInput}&gt;Focar no input&lt;/button&gt;
-    &lt;/div&gt;
-  );
-}
-
-export default FocoInput;
+<p>Neste exemplo, o <code>fetch</code> faz uma requisição <code>GET</code> para a URL fornecida, processa a resposta como JSON, e lida com possíveis erros.</p>
+<h3 id="um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o <code>fetch</code> com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</h3>
+<h3 id="exemplo-de-requisicao-get">Exemplo de requisição <code>GET</code></h3>
+<p>Neste exemplo, vamos buscar uma lista de posts da API usando o <code>fetch</code>.</p>
+<pre><code class="language-javascript">// Fazendo uma requisição GET para obter posts da API JSONPlaceholder
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response =&gt; {
+    if (!response.ok) {
+      throw new Error('Erro na requisição: ' + response.status);
+    }
+    return response.json();  // Converte a resposta para JSON
+  })
+  .then(posts =&gt; {
+    console.log(posts);  // Exibe os posts no console
+  })
+  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
 </code></pre>
-<h4 id="explicacao_1">Explicação</h4>
+<h3 id="exemplo-de-requisicao-post">Exemplo de requisição <code>POST</code></h3>
+<p>Neste exemplo, vamos enviar um novo post para a API com uma requisição <code>POST</code>.</p>
+<pre><code class="language-javascript">// Enviando dados para criar um novo post
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    title: 'Meu novo post',
+    body: 'Este é o conteúdo do post',
+    userId: 1
+  }),
+})
+  .then(response =&gt; {
+    if (!response.ok) {
+      throw new Error('Erro na requisição: ' + response.status);
+    }
+    return response.json();  // Converte a resposta para JSON
+  })
+  .then(post =&gt; {
+    console.log('Post criado:', post);  // Exibe o post criado
+  })
+  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
+</code></pre>
+<h3 id="explicacao">Explicação:</h3>
 <ul>
-<li><strong>Referência ao DOM</strong>: <code>useRef(null)</code> cria uma referência vazia. <code>inputRef.current</code> é associado ao campo de entrada com <code>ref={inputRef}</code>.</li>
-<li><strong>Manipulação Direta do DOM</strong>: <code>inputRef.current.focus()</code> permite que o botão “Focar no input” posicione o cursor no campo de entrada.</li>
+<li><strong>GET</strong>: O primeiro exemplo faz uma requisição para obter uma lista de posts, e a resposta é convertida para JSON e exibida no console.</li>
+<li><strong>POST</strong>: No segundo exemplo, criamos um novo post com os campos <code>title</code>, <code>body</code> e <code>userId</code>, enviando esses dados como JSON no corpo da requisição.</li>
 </ul>
-<h3 id="diferenca-entre-usestate-e-useref">Diferença entre <code>useState</code> e <code>useRef</code></h3>
-<table>
-<thead>
-<tr>
-<th>Característica</th>
-<th><code>useState</code></th>
-<th><code>useRef</code></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Provoca re-renderização</td>
-<td>Sim, ao atualizar o estado</td>
-<td>Não, as mudanças em <code>.current</code> não causam render</td>
-</tr>
-<tr>
-<td>Finalidade</td>
-<td>Gerenciar dados que afetam a renderização</td>
-<td>Referenciar elementos do DOM ou armazenar dados temporários</td>
-</tr>
-<tr>
-<td>Persistência</td>
-<td>Entre re-renderizações</td>
-<td>Entre re-renderizações</td>
-</tr>
-<tr>
-<td>Uso comum</td>
-<td>Campos de formulário, contadores, flags</td>
-<td>Foco em elementos, armazenar IDs de intervalos, variáveis imutáveis</td>
-</tr>
-</tbody>
-</table>
-<h3 id="quando-usar-cada-um">Quando Usar Cada Um</h3>
-<ul>
-<li><strong><code>useState</code></strong> é ideal para dados que impactam a interface e exigem uma atualização visível.</li>
-<li><strong><code>useRef</code></strong> é útil para manipulação direta de elementos DOM ou armazenamento de dados que não devem afetar a renderização.</li>
-</ul>
-<p>Esses hooks complementam a lógica do React, permitindo criar componentes interativos e performáticos com um bom gerenciamento de estado e referências.</p></div>
+<p>A API do JSONPlaceholder é ótima para testes rápidos e experimentação com <code>fetch</code>.</p></div>
         
         
     </div>
