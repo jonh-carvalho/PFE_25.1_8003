@@ -5,6 +5,7 @@
 ---
 
 ### **Objetivo do Projeto**  
+
 Criar uma plataforma web onde usuários possam:  
 1. Cadastrar/login com perfil personalizado.  
 2. Compartilhar receitas com fotos, ingredientes e modo de preparo.  

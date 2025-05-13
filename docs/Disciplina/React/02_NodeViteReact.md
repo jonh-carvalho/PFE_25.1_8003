@@ -1,17 +1,21 @@
-# Criando um App React com Vite
+# 02 - **Criando um App React com Vite**
 
-## Por que usar Vite?
+## Por que usar [Vite](https://vite.dev/)?
 
 Vite é uma ferramenta de construção de front-end que oferece um desenvolvimento rápido e uma experiência de usuário aprimorada, especialmente para projetos React. Ela é mais leve e rápida que ferramentas como Webpack, proporcionando hot module replacement (HMR) quase instantâneo.
 
-## Criando o Projeto
+### Criando o Projeto
 
 **1. Instale o Node.js e npm (ou yarn):**
 
-* Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/).
-* Se estiver instalado faça o download do node.js LTS binary for Windows e extraia para o local desejado(Ex: c:\node) e adicione PATH do da pasta do node na variável de ambiente PATH.
+* Certifique-se de ter o Node.js instalado em sua máquina. Você pode baixá-lo em [https://nodejs.org/](https://nodejs.org/). Dê Preferência a versão LTS. No seu desktop ou notebook use a versão com o instalador.
+* No laboratório se não estiver instalado faça o download do [node.js LTS binary](https://nodejs.org/dist/v22.15.0/node-v22.15.0-win-x64.zip) for Windows e extraia o zip para o local desejado(Ex: c:\node) e adicione PATH do da pasta do node na variável de ambiente PATH.
 
-> Tecla Windows + R => digite **rundll32 sysdm.cpl,EditEnvironmentVariables**
+> Tecla Windows + R => digite:
+
+```bash
+rundll32 sysdm.cpl,EditEnvironmentVariables
+```
 
 **2. Crie um novo projeto:**
 
@@ -36,7 +40,7 @@ npm run dev
 
 Seu aplicativo estará disponível em `http://localhost:3000/`.
 
-## Construindo o App: Um Contador Simples
+### Construindo o App: Um Contador Simples
 
 **1. Abra o arquivo `src/App.jsx`:**
 
@@ -66,7 +70,7 @@ export default App;
 * **setCount:** Função para atualizar o valor de count.
 * **onClick:** Manipulador de eventos que incrementa o valor de count quando o botão é clicado.
 
-### Demonstração de Outros Conceitos
+#### Demonstração de Outros Conceitos
 
 Outro pontos fundamentais do React:
 
@@ -78,14 +82,14 @@ Outro pontos fundamentais do React:
 * **Listas:** Renderizar listas de elementos usando o método `map`.
 * **Eventos:** Manipular diversos tipos de eventos (e.g., `onMouseOver`, `onSubmit`).
 
-### Próximos Passos
+#### Próximos Passos
 
 * **Redux:** Gerencie o estado global de sua aplicação.
 * **React Router:** Crie rotas para navegar entre diferentes páginas.
 * **Hooks:** Utilize hooks personalizados para criar lógica reutilizável.
 * **Styled Components:** Estilize seus componentes de forma mais declarativa.
 
-## **Exemplo mais completo: Uma lista de tarefas**
+### **Exemplo mais completo: Uma lista de tarefas**
 
 ```jsx
 import React, { useState } from'react';
