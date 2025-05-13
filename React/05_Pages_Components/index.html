@@ -355,88 +355,132 @@
 <pre><code class="language-bash">src/
 │
 ├── components/
-│   ├── Button.jsx
-│   ├── Card.jsx
-│   ├── Navbar.jsx
+│   ├── Header.jsx
+│   ├── Content.jsx
+│   ├── Historia.jsx
 │   └── Footer.jsx
 │
 ├── pages/
 │   ├── HomePage.jsx
 │   ├── AboutPage.jsx
-│   ├── ContactPage.jsx
-│   └── DashboardPage.jsx
 │
 ├── App.jsx
 ├── main.jsx
 └── index.css
 </code></pre>
 <h4 id="exemplo-de-uso-pratico">Exemplo de uso prático</h4>
+<h5 id="appjsx-app-inicial"><strong>App.jsx</strong> (App inicial)</h5>
+<pre><code class="language-jsx">import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import './App.css'
+
+function App() {
+
+  return (
+      &lt;Router&gt;
+         &lt;Routes&gt;
+           &lt;Route path=&quot;/&quot; element={&lt;Home /&gt;} /&gt;
+           &lt;Route path=&quot;/about&quot; element={&lt;About /&gt;} /&gt;
+         &lt;/Routes&gt;
+       &lt;/Router&gt;
+  )
+}
+
+export default App
+</code></pre>
 <h5 id="homepagejsx-pagina"><strong>HomePage.jsx</strong> (Página)</h5>
 <pre><code class="language-jsx">import React from 'react';
-import Navbar from '../components/Navbar';
+import Header from '../components/Header';
+import Content from '../components/Content';
 import Footer from '../components/Footer';
-import Features from '../components/Features';
-import Hero from '../components/Hero';
 
-function HomePage() {
-  return (
+function Home() {
+    return ( 
     &lt;&gt;
-      &lt;Navbar /&gt;
-      &lt;Hero /&gt;
-      &lt;Features /&gt;
+      &lt;h1&gt;Home&lt;/h1&gt;
+
+      &lt;Header /&gt;
+      &lt;Content /&gt;
       &lt;Footer /&gt;
     &lt;/&gt;
-  );
-}
 
-export default HomePage;
+)}
+  export default Home;
 </code></pre>
-<p>Aqui, a página <strong>HomePage</strong> serve como a estrutura principal da página de "Home", e ela reutiliza componentes como <strong>Navbar</strong>, <strong>Hero</strong>, <strong>Features</strong> e <strong>Footer</strong>. Cada componente pode ser reutilizado em outras páginas, mantendo o código modular.</p>
-<h5 id="navbarjsx-componente"><strong>Navbar.jsx</strong> (Componente)</h5>
-<pre><code class="language-jsx">function Navbar() {
-  return (
-    &lt;nav&gt;
-      &lt;h1&gt;Logo&lt;/h1&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;/about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/nav&gt;
-  );
-}
+<p>Aqui, a página <strong>Home</strong> serve como a estrutura principal da página de "Home", e ela reutiliza componentes como <strong>Header</strong>, <strong>Hero</strong>, <strong>Features</strong> e <strong>Footer</strong>. Cada componente pode ser reutilizado em outras páginas, mantendo o código modular.</p>
+<h5 id="headerjsx-componente"><strong>Header.jsx</strong> (Componente)</h5>
+<pre><code class="language-jsx">function Header() {
+    return (
+    &lt;&gt;
+        &lt;h1&gt;Header&lt;/h1&gt;
+    &lt;/&gt;
+    )
+  }
 
-export default Navbar;
+  export default Header
+}
 </code></pre>
-<p>O <strong>Navbar</strong> é um componente que pode ser utilizado em várias páginas, como <strong>HomePage</strong>, <strong>AboutPage</strong> e <strong>ContactPage</strong>. Ele contém a lógica e a estrutura do menu de navegação.</p>
-<h5 id="aboutpagejsx-pagina"><strong>AboutPage.jsx</strong> (Página)</h5>
+<p>O <strong>Header</strong> é um componente que pode ser utilizado em várias páginas, como <strong>Home</strong>, <strong>About</strong> e <strong>Contact</strong>. Ele contém a lógica e a estrutura do menu de navegação.</p>
+<h5 id="aboutjsx-pagina"><strong>About.jsx</strong> (Página)</h5>
 <pre><code class="language-jsx">import React from 'react';
-import Navbar from '../components/Navbar';
+import Header from '../components/Header';
+import Historia from '../components/Historia';
 import Footer from '../components/Footer';
-
-function AboutPage() {
-  return (
+function About() {
+    return (
     &lt;&gt;
-      &lt;Navbar /&gt;
-      &lt;section className=&quot;about&quot;&gt;
-        &lt;h1&gt;About Us&lt;/h1&gt;
-        &lt;p&gt;We are a company that values...&lt;/p&gt;
-      &lt;/section&gt;
+      &lt;Header /&gt;
+      &lt;Historia /&gt;
       &lt;Footer /&gt;
-    &lt;/&gt;
-  );
-}
+    &lt;/&gt;)
+  }
 
-export default AboutPage;
+  export default About;
 </code></pre>
-<p>Aqui, a <strong>AboutPage</strong> também reutiliza os mesmos componentes de <strong>Navbar</strong> e <strong>Footer</strong>, mas tem um conteúdo único no corpo da página, como a seção "About Us".</p>
+<p>Aqui, a <strong>About</strong> também reutiliza os mesmos componentes de <strong>Header</strong> e <strong>Footer</strong>, mas tem um conteúdo único no corpo da página, como a seção "Historia".</p>
 <h3 id="resumo-da-organizacao">Resumo da Organização</h3>
 <ul>
 <li><strong>Páginas</strong> (<strong>Pages</strong>) representam <strong>rotas</strong> e normalmente combinam vários <strong>componentes</strong> para formar uma tela completa.</li>
 <li><strong>Componentes</strong> (<strong>Components</strong>) são elementos mais simples e reutilizáveis que compõem partes da interface.</li>
 <li>Manter pastas separadas para páginas e componentes ajuda na escalabilidade e clareza do código.</li>
 </ul>
-<p>Ao seguir essa organização, você mantém o código mais estruturado, fácil de entender e de escalar conforme a aplicação cresce.</p></div>
+<p>Ao seguir essa organização, você mantém o código mais estruturado, fácil de entender e de escalar conforme a aplicação cresce.</p>
+<h5 id="footerjsx"><strong>Footer.jsx</strong></h5>
+<pre><code>function Footer() {
+    return (
+    &lt;&gt;
+        &lt;h1&gt;Footer&lt;/h1&gt;
+    &lt;/&gt;
+    )
+  }
+
+  export default Footer;
+</code></pre>
+<h5 id="historiajsx"><strong>Historia.jsx</strong></h5>
+<pre><code>function Historia() {
+    return (
+    &lt;&gt;
+        &lt;h1&gt;Historia&lt;/h1&gt;
+        &lt;p&gt;lipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, perspiciatis nihil fuga quaerat sint ratione sit deleniti non recusandae facere tenetur itaque blanditiis ex laboriosam totam, error labore rem magni.&lt;/p&gt;
+    &lt;/&gt;
+    )
+  }
+
+  export default Historia
+</code></pre>
+<h5 id="contentjsx"><strong>Content.jsx</strong></h5>
+<pre><code>function Content() {
+    return (
+    &lt;&gt;
+        &lt;h1&gt;Content&lt;/h1&gt;
+    &lt;/&gt;
+    )
+  }
+
+  export default Content;
+</code></pre></div>
         
         
     </div>
