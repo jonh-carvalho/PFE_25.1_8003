@@ -23,20 +23,28 @@ A organização de uma aplicação **React** pode ser melhorada ao diferenciar *
 
 Uma boa prática é criar pastas separadas para **Pages** e **Components** no diretório `src`. Isso ajuda a organizar o código e deixar claro o propósito de cada arquivo.
 
+### Criar o projeto
+
+```bash
+   npm create vite@latest pages_app
+```
+
 #### Estrutura de diretório recomendada
 
 ```bash
 src/
 │
 ├── components/
-│   ├── Header.jsx
-│   ├── Content.jsx
-│   ├── Historia.jsx
+│   ├── Button.jsx
+│   ├── Card.jsx
+│   ├── Navbar.jsx
 │   └── Footer.jsx
 │
 ├── pages/
 │   ├── HomePage.jsx
 │   ├── AboutPage.jsx
+│   ├── ContactPage.jsx
+│   └── DashboardPage.jsx
 │
 ├── App.jsx
 ├── main.jsx
@@ -45,90 +53,76 @@ src/
 
 #### Exemplo de uso prático
 
-##### **App.jsx** (App inicial)
-```jsx
-import { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import './App.css'
-
-function App() {
-  
-  return (
-      <Router>
-         <Routes>
-           <Route path="/" element={<Home />} />
-           <Route path="/about" element={<About />} />
-         </Routes>
-       </Router>
-  )
-}
-
-export default App
-```
-
 ##### **HomePage.jsx** (Página)
 
 ```jsx
 import React from 'react';
-import Header from '../components/Header';
-import Content from '../components/Content';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Features from '../components/Features';
+import Hero from '../components/Hero';
 
-function Home() {
-    return ( 
+function HomePage() {
+  return (
     <>
-      <h1>Home</h1>
-
-      <Header />
-      <Content />
+      <Navbar />
+      <Hero />
+      <Features />
       <Footer />
     </>
- 
-)}
-  export default Home;
+  );
+}
+
+export default HomePage;
 ```
 
-Aqui, a página **Home** serve como a estrutura principal da página de "Home", e ela reutiliza componentes como **Header**, **Hero**, **Features** e **Footer**. Cada componente pode ser reutilizado em outras páginas, mantendo o código modular.
+Aqui, a página **HomePage** serve como a estrutura principal da página de "Home", e ela reutiliza componentes como **Navbar**, **Hero**, **Features** e **Footer**. Cada componente pode ser reutilizado em outras páginas, mantendo o código modular.
 
-##### **Header.jsx** (Componente)
+##### **Navbar.jsx** (Componente)
 
 ```jsx
-function Header() {
-    return (
-    <>
-        <h1>Header</h1>
-    </>
-    )
-  }
-
-  export default Header
+function Navbar() {
+  return (
+    <nav>
+      <h1>Logo</h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  );
 }
+
+export default Navbar;
 ```
 
-O **Header** é um componente que pode ser utilizado em várias páginas, como **Home**, **About** e **Contact**. Ele contém a lógica e a estrutura do menu de navegação.
+O **Navbar** é um componente que pode ser utilizado em várias páginas, como **HomePage**, **AboutPage** e **ContactPage**. Ele contém a lógica e a estrutura do menu de navegação.
 
-##### **About.jsx** (Página)
+##### **AboutPage.jsx** (Página)
 
 ```jsx
 import React from 'react';
-import Header from '../components/Header';
-import Historia from '../components/Historia';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-function About() {
-    return (
-    <>
-      <Header />
-      <Historia />
-      <Footer />
-    </>)
-  }
 
-  export default About;
+function AboutPage() {
+  return (
+    <>
+      <Navbar />
+      <section className="about">
+        <h1>About Us</h1>
+        <p>We are a company that values...</p>
+      </section>
+      <Footer />
+    </>
+  );
+}
+
+export default AboutPage;
 ```
 
-Aqui, a **About** também reutiliza os mesmos componentes de **Header** e **Footer**, mas tem um conteúdo único no corpo da página, como a seção "Historia".
+Aqui, a **AboutPage** também reutiliza os mesmos componentes de **Navbar** e **Footer**, mas tem um conteúdo único no corpo da página, como a seção "About Us".
 
 ### Resumo da Organização
 
@@ -137,44 +131,3 @@ Aqui, a **About** também reutiliza os mesmos componentes de **Header** e **Foot
 - Manter pastas separadas para páginas e componentes ajuda na escalabilidade e clareza do código.
 
 Ao seguir essa organização, você mantém o código mais estruturado, fácil de entender e de escalar conforme a aplicação cresce.
-
-##### **Footer.jsx** 
-```
-function Footer() {
-    return (
-    <>
-        <h1>Footer</h1>
-    </>
-    )
-  }
-
-  export default Footer;
-```
-
-##### **Historia.jsx**
-
-```	
-function Historia() {
-    return (
-    <>
-        <h1>Historia</h1>
-        <p>lipsum Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, perspiciatis nihil fuga quaerat sint ratione sit deleniti non recusandae facere tenetur itaque blanditiis ex laboriosam totam, error labore rem magni.</p>
-    </>
-    )
-  }
-
-  export default Historia
-```	
-
-##### **Content.jsx**
-```	
-function Content() {
-    return (
-    <>
-        <h1>Content</h1>
-    </>
-    )
-  }
-
-  export default Content;
-``` 
