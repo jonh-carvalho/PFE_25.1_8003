@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>08 - Forms Props - PFE_25.1_8003</title>
+    <title>Eventos controlados - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -200,8 +200,8 @@
 
                         
                             
-<li class="active">
-    <a href="./">08 - Forms Props</a>
+<li >
+    <a href="../08_Hooks/">08 - Hooks (Foco em Componentes Funcionais)</a>
 </li>
 
                         
@@ -213,13 +213,19 @@
                         
                             
 <li >
-    <a href="../10_Hooks/">10 - Hooks (Foco em Componentes Funcionais)</a>
+    <a href="../10_Http/">10 - Protocolo HTTP</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Eventos controlados</a>
 </li>
 
                         
                             
 <li >
-    <a href="../10_Http/">10 - Protocolo HTTP</a>
+    <a href="../11_Forms_Props/">08 - Forms Props</a>
 </li>
 
                         
@@ -303,17 +309,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../07_Props/">
+                        <a rel="prev" href="../10_Http/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../09_UseState_useRef/">
+                        <a rel="next" href="../11_Forms_Props/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/React/08_Forms_Props.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/React/11_EventosControlados.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -325,140 +331,143 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#08-forms-props">08 - Forms Props</a></li>
-            <li class="second-level"><a href="#1-formularios-controlados">1. Formulários Controlados</a></li>
+        <li class="first-level active"><a href="#eventos-controlados">Eventos controlados</a></li>
+            <li class="second-level"><a href="#introducao">Introdução</a></li>
                 
-                <li class="third-level"><a href="#exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com useState</a></li>
-                <li class="third-level"><a href="#vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</a></li>
-            <li class="second-level"><a href="#2-formularios-nao-controlados">2. Formulários Não Controlados</a></li>
-                
-                <li class="third-level"><a href="#exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com useRef</a></li>
-                <li class="third-level"><a href="#vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</a></li>
-            <li class="second-level"><a href="#3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</a></li>
-                
-            <li class="second-level"><a href="#4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</a></li>
-                
+                <li class="third-level"><a href="#caracteristicas-dos-eventos-controlados">📌 Características dos Eventos Controlados</a></li>
+                <li class="third-level"><a href="#como-funciona">🔄 Como Funciona?</a></li>
+                <li class="third-level"><a href="#exemplo-pratico">📝 Exemplo Prático</a></li>
+                <li class="third-level"><a href="#eventos-nao-controlados-uncontrolled">🆚 Eventos NÃO Controlados (Uncontrolled)</a></li>
+                <li class="third-level"><a href="#vantagens-dos-eventos-controlados">✅ Vantagens dos Eventos Controlados</a></li>
+                <li class="third-level"><a href="#conclusao">🔹 Conclusão</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="08-forms-props">08 - Forms Props</h1>
-<p>No React, formulários funcionam de maneira semelhante ao HTML tradicional, mas com algumas diferenças importantes devido ao conceito de <strong>estado</strong> e <strong>eventos controlados</strong>. Em vez de apenas enviar dados ao servidor ao submeter o formulário, o React mantém os valores dos campos de entrada sincronizados com o estado do componente. Isso é feito através de formulários <strong>controlados</strong> e <strong>não controlados</strong>.</p>
-<h3 id="1-formularios-controlados">1. Formulários Controlados</h3>
-<p>Em formulários controlados, o estado do React mantém os valores dos campos. Isso significa que o valor de cada campo é controlado por uma variável no estado do componente, permitindo controle total sobre o que é exibido e processado.</p>
-<h4 id="exemplo-de-formulario-controlado-com-usestate">Exemplo de Formulário Controlado com <code>useState</code></h4>
-<p>Aqui está um exemplo de um formulário de login que usa o estado para controlar os valores dos campos:</p>
-<pre><code class="language-jsx">import React, { useState } from 'react';
+<h1 id="eventos-controlados">Eventos controlados</h1>
+<p>No React, <strong>eventos controlados</strong> são uma forma de gerenciar elementos de formulários (como <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>) onde o <strong>valor exibido no elemento é totalmente controlado pelo estado (state) do React</strong>, e as mudanças nesse valor são tratadas por funções de callback (como <code>onChange</code>).</p>
+<hr />
+<h2 id="introducao">Introdução</h2>
+<h3 id="caracteristicas-dos-eventos-controlados"><strong>📌 Características dos Eventos Controlados</strong></h3>
+<ol>
+<li><strong>O valor do elemento é sincronizado com o estado do React</strong>  </li>
+<li>O React é a "fonte da verdade" (single source of truth).</li>
+<li><strong>Toda alteração passa por um <code>onChange</code> (ou evento similar)</strong>  </li>
+<li>O React atualiza o estado, que por sua vez atualiza o valor exibido.</li>
+<li><strong>São a forma recomendada para formulários no React</strong>  </li>
+<li>Melhor controle sobre os dados.</li>
+</ol>
+<hr />
+<h3 id="como-funciona"><strong>🔄 Como Funciona?</strong></h3>
+<ol>
+<li>O valor do input é definido por uma variável de estado (<code>useState</code>).</li>
+<li>Quando o usuário digita, o evento <code>onChange</code> é disparado.</li>
+<li>O React atualiza o estado com o novo valor.</li>
+<li>O componente é renderizado novamente, refletindo a mudança.</li>
+</ol>
+<hr />
+<h3 id="exemplo-pratico"><strong>📝 Exemplo Prático</strong></h3>
+<h4 id="input-controlado"><strong>Input Controlado</strong></h4>
+<pre><code class="language-jsx">import { useState } from 'react';
 
-function FormularioLogin() {
-  const [email, setEmail] = useState('');
-  const [senha, setSenha] = useState('');
+function ControlledInput() {
+  const [text, setText] = useState(''); // Estado controla o valor
+
+  const handleChange = (e) =&gt; {
+    setText(e.target.value); // Atualiza o estado
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;input
+        type=&quot;text&quot;
+        value={text} // Valor sincronizado com o estado
+        onChange={handleChange} // Atualiza o estado quando o usuário digita
+      /&gt;
+      &lt;p&gt;Texto digitado: {text}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h4 id="formulario-controlado"><strong>Formulário Controlado</strong></h4>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+function LoginForm() {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (e) =&gt; {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value, // Atualiza apenas o campo alterado
+    });
+  };
 
   const handleSubmit = (e) =&gt; {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Senha:', senha);
-    // Processar o login
+    console.log('Dados enviados:', formData);
   };
 
   return (
     &lt;form onSubmit={handleSubmit}&gt;
-      &lt;label&gt;
-        Email:
-        &lt;input
-          type=&quot;email&quot;
-          value={email}
-          onChange={(e) =&gt; setEmail(e.target.value)}
-        /&gt;
-      &lt;/label&gt;
-      &lt;label&gt;
-        Senha:
-        &lt;input
-          type=&quot;password&quot;
-          value={senha}
-          onChange={(e) =&gt; setSenha(e.target.value)}
-        /&gt;
-      &lt;/label&gt;
+      &lt;input
+        type=&quot;email&quot;
+        name=&quot;email&quot;
+        value={formData.email}
+        onChange={handleChange}
+      /&gt;
+      &lt;input
+        type=&quot;password&quot;
+        name=&quot;password&quot;
+        value={formData.password}
+        onChange={handleChange}
+      /&gt;
       &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
     &lt;/form&gt;
   );
 }
-
-export default FormularioLogin;
 </code></pre>
-<p>Neste exemplo:</p>
+<hr />
+<h3 id="eventos-nao-controlados-uncontrolled"><strong>🆚 Eventos NÃO Controlados (Uncontrolled)</strong></h3>
 <ul>
-<li><strong><code>email</code> e <code>senha</code></strong> são estados que armazenam os valores dos campos.</li>
-<li>O <code>onChange</code> atualiza o estado com o valor atual do campo.</li>
-<li>O <code>handleSubmit</code> previne o envio do formulário (<code>e.preventDefault()</code>) e pode ser usado para processar dados ou enviar ao servidor.</li>
+<li><strong>Não são sincronizados com o estado do React</strong>.</li>
+<li>Usam <code>ref</code> para acessar o valor diretamente do DOM.</li>
+<li>Úteis para integração com bibliotecas externas ou quando o desempenho é crítico.</li>
 </ul>
-<h4 id="vantagens-dos-formularios-controlados">Vantagens dos Formulários Controlados</h4>
-<ul>
-<li><strong>Controle Total</strong>: O React controla o estado dos campos, permitindo validações e alterações dinâmicas.</li>
-<li><strong>Validação e Manipulação</strong>: Facilidade em validar campos à medida que o usuário digita.</li>
-<li><strong>Sincronização</strong>: Como os dados dos campos estão no estado, é fácil compartilhar e processar dados em outros componentes.</li>
-</ul>
-<h3 id="2-formularios-nao-controlados">2. Formulários Não Controlados</h3>
-<p>Em formulários não controlados, os valores dos campos não são armazenados no estado, mas diretamente nos elementos do DOM. O React pode acessar o valor do campo diretamente com uma referência (<code>ref</code>) apenas quando necessário.</p>
-<h4 id="exemplo-de-formulario-nao-controlado-com-useref">Exemplo de Formulário Não Controlado com <code>useRef</code></h4>
-<p>Aqui está um exemplo de formulário de login usando o <code>useRef</code> para acessar os valores:</p>
-<pre><code class="language-jsx">import React, { useRef } from 'react';
+<p><strong>Exemplo de Input NÃO Controlado:</strong></p>
+<pre><code class="language-jsx">import { useRef } from 'react';
 
-function FormularioLogin() {
-  const emailRef = useRef();
-  const senhaRef = useRef();
+function UncontrolledInput() {
+  const inputRef = useRef();
 
-  const handleSubmit = (e) =&gt; {
-    e.preventDefault();
-    console.log('Email:', emailRef.current.value);
-    console.log('Senha:', senhaRef.current.value);
-    // Processar o login
+  const handleClick = () =&gt; {
+    alert(`Valor digitado: ${inputRef.current.value}`);
   };
 
   return (
-    &lt;form onSubmit={handleSubmit}&gt;
-      &lt;label&gt;
-        Email:
-        &lt;input type=&quot;email&quot; ref={emailRef} /&gt;
-      &lt;/label&gt;
-      &lt;label&gt;
-        Senha:
-        &lt;input type=&quot;password&quot; ref={senhaRef} /&gt;
-      &lt;/label&gt;
-      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
-    &lt;/form&gt;
+    &lt;div&gt;
+      &lt;input type=&quot;text&quot; ref={inputRef} /&gt;
+      &lt;button onClick={handleClick}&gt;Mostrar Valor&lt;/button&gt;
+    &lt;/div&gt;
   );
 }
-
-export default FormularioLogin;
 </code></pre>
-<p>Neste exemplo:</p>
+<hr />
+<h3 id="vantagens-dos-eventos-controlados"><strong>✅ Vantagens dos Eventos Controlados</strong></h3>
+<p>✔ <strong>Validação em tempo real</strong> (ex: bloquear caracteres inválidos).<br />
+✔ <strong>Fácil manipulação antes de enviar dados</strong> (ex: formatação).<br />
+✔ <strong>Integração com outros estados</strong> (ex: habilitar/desabilitar botões).<br />
+✔ <strong>Mais previsível e alinhado com o fluxo do React</strong>.</p>
+<hr />
+<h3 id="conclusao"><strong>🔹 Conclusão</strong></h3>
 <ul>
-<li><strong><code>emailRef</code> e <code>senhaRef</code></strong> são referências (<code>useRef</code>) aos elementos de entrada.</li>
-<li>No <code>handleSubmit</code>, <code>emailRef.current.value</code> e <code>senhaRef.current.value</code> acessam o valor dos campos diretamente.</li>
+<li><strong>Controlados</strong>: O React gerencia o estado do input (<code>value</code> + <code>onChange</code>).  </li>
+<li><strong>Não controlados</strong>: O DOM gerencia o valor (acessado via <code>ref</code>).  </li>
 </ul>
-<h4 id="vantagens-dos-formularios-nao-controlados">Vantagens dos Formulários Não Controlados</h4>
-<ul>
-<li><strong>Menos Complexidade</strong>: Útil em formulários simples, sem necessidade de armazenar dados no estado.</li>
-<li><strong>Desempenho</strong>: Em formulários complexos, o React evita re-renderizações ao não monitorar o valor de cada campo.</li>
-</ul>
-<h3 id="3-escolhendo-entre-formularios-controlados-e-nao-controlados">3. Escolhendo entre Formulários Controlados e Não Controlados</h3>
-<ul>
-<li>Use <strong>formulários controlados</strong> quando precisar validar ou manipular dados dinamicamente, ou quando o valor dos campos precisa ser sincronizado com outros estados ou componentes.</li>
-<li>Use <strong>formulários não controlados</strong> para formulários simples, onde o valor é lido apenas na submissão ou em momentos específicos, sem necessidade de interação constante.</li>
-</ul>
-<h3 id="4-exemplos-de-validacao-em-formularios-controlados">4. Exemplos de Validação em Formulários Controlados</h3>
-<p>Para adicionar validações, use o estado para verificar condições e exibir mensagens conforme necessário:</p>
-<pre><code class="language-jsx">const handleEmailChange = (e) =&gt; {
-  setEmail(e.target.value);
-  if (!e.target.value.includes('@')) {
-    setErroEmail('Email inválido');
-  } else {
-    setErroEmail('');
-  }
-};
-</code></pre>
-<p>React facilita a criação de formulários altamente dinâmicos, onde a experiência do usuário é controlada diretamente pelo estado do aplicativo.</p></div>
+<p><strong>Use eventos controlados na maioria dos casos</strong> para manter a consistência e facilitar o gerenciamento de formulários no React. 🚀</p></div>
         
         
     </div>
