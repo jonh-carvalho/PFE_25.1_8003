@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>10 - Hooks (Foco em Componentes Funcionais) - PFE_25.1_8003</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">PFE_25.1_8003</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Disciplina <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../Disciplina/aulas/">Aulas</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Disciplina/bibliografia/">Bibliografia</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Disciplina/github/">Versionamento</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../Disciplina/mkdocs/">MkDocs</a>
+</li>
+
+                        
+                            
+  <li class="dropdown-submenu">
+    <a tabindex="-1" href="">Roteiros</a>
+    <ul class="dropdown-menu">
+        
+            
+<li >
+    <a href="../../Disciplina/Roteiros/AT/">06 - Análise de Tarefas</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Disciplina/Roteiros/Aht/">06 - Análise Hierárquica de Tarefas (AHT)</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Disciplina/Roteiros/DesignThinking/">04 Design Thinking</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Disciplina/Roteiros/EpicsFeaturesUserStories/">09 - História de Usuário</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Disciplina/Roteiros/prot%C3%B3tipo/">Protótipo</a>
+</li>
+
+        
+            
+<li >
+    <a href="../../Disciplina/Roteiros/receitas/">Receitas</a>
+</li>
+
+        
+    </ul>
+  </li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">React <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../01_Intro/">01 - Introdução ao React com HTML e CDN</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../02_NodeViteReact/">02 - Criando um App React com Vite</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../03_Spa/">03 - Criando um App React SPA</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../04_Componentes/">04 - Componentes em uma SPA</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../05_Pages_Components/">05 - Pages e Components</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../06_Estilizando%20React/">06 - Estilizar um app React</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../07_Props/">07 - Props</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../08_Forms_Props/">08 - Forms Props</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../09_UseState_useRef/">09 - useState e useRef</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">10 - Hooks (Foco em Componentes Funcionais)</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../10_Http/">10 - Protocolo HTTP</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../11_Lendo%20Dados/">11 Lendo Dados</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../12_Fetch/">12 - Fetch</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Design Thinking <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../_Design%20Thinking/5w2h/">5W2H</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../_Design%20Thinking/Brainstorm/">Brainstorm</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../_Design%20Thinking/documento_de_visao/">Documento de Visão</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../_Design%20Thinking/mapa_mental/">Mapas Mentais</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../_Design%20Thinking/metodologia/">Metodologia</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../_Design%20Thinking/prototipo_alta_fidelidade/">Protótipo</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Sprint Planning <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../_Sprint%20Planning/sprint/">Sprint I</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../09_UseState_useRef/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../10_Http/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/React/10_Hooks.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#10-hooks-foco-em-componentes-funcionais">10 - Hooks (Foco em Componentes Funcionais)</a></li>
+            <li class="second-level"><a href="#introducao">Introdução</a></li>
+                
+                <li class="third-level"><a href="#1-usestate-estado-em-componentes-funcionais">1. - useState (Estado em Componentes Funcionais)</a></li>
+                <li class="third-level"><a href="#boas-praticas">Boas Práticas:</a></li>
+                <li class="third-level"><a href="#exemplo-pratico">Exemplo Prático:</a></li>
+                <li class="third-level"><a href="#exercicio">Exercício:</a></li>
+                <li class="third-level"><a href="#2-useeffect-efeitos-colaterais">2. - useEffect (Efeitos Colaterais)</a></li>
+                <li class="third-level"><a href="#3-createcontext-compartilhamento-de-estado">3. - createContext (Compartilhamento de Estado)</a></li>
+                <li class="third-level"><a href="#4-useref-referencias-e-valores-mutaveis">4. - useRef (Referências e Valores Mutáveis)</a></li>
+                <li class="third-level"><a href="#5-usereducer-estado-complexo">5. - useReducer (Estado Complexo)</a></li>
+                <li class="third-level"><a href="#exercicio-final-do-modulo">Exercício Final do Módulo</a></li>
+                <li class="third-level"><a href="#todo-list-avancada-com-react-hooks">Todo List Avançada com React Hooks</a></li>
+                <li class="third-level"><a href="#recursos-adicionais">Recursos Adicionais:</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="10-hooks-foco-em-componentes-funcionais">10 - <strong>Hooks (Foco em Componentes Funcionais)</strong></h1>
+<hr />
+<h2 id="introducao">Introdução</h2>
+<p><strong>Objetivo:</strong> Dominar os principais Hooks do React para gerenciar estado, efeitos colaterais e referências em componentes funcionais.  </p>
+<h3 id="1-usestate-estado-em-componentes-funcionais"><strong>1. - useState (Estado em Componentes Funcionais)</strong></h3>
+<h4 id="conteudo-teorico"><strong>Conteúdo Teórico:</strong></h4>
+<ul>
+<li>O que é estado em React?  </li>
+<li>Diferença entre <code>props</code> e <code>state</code>.  </li>
+<li>Sintaxe do <code>useState</code>:  </li>
+</ul>
+<p><code>jsx
+  const [state, setState] = useState(initialValue);</code>
+- Atualizações assíncronas e imutabilidade.  </p>
+<h4 id="1-o-que-e-estado-em-react"><strong>1. O que é Estado em React?</strong></h4>
+<p>O <strong>estado (state)</strong> em React representa os dados dinâmicos de um componente. Ele permite que o componente:  </p>
+<ul>
+<li><strong>Armazene informações</strong> que podem mudar ao longo do tempo.  </li>
+<li><strong>Re-renderize</strong> a interface quando o estado é atualizado.  </li>
+<li><strong>Gerencie interações do usuário</strong> (cliques, formulários, etc.).  </li>
+</ul>
+<p><strong>Exemplo:</strong> Um contador que incrementa quando o usuário clica em um botão.  </p>
+<hr />
+<h4 id="2-diferenca-entre-props-e-state"><strong>2. Diferença entre <code>props</code> e <code>state</code></strong></h4>
+<table>
+<thead>
+<tr>
+<th><strong><code>props</code></strong></th>
+<th><strong><code>state</code></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passado de um componente <strong>pai para filho</strong>.</td>
+<td>Gerenciado <strong>internamente</strong> pelo componente.</td>
+</tr>
+<tr>
+<td><strong>Imutável</strong> (não pode ser modificado pelo componente filho).</td>
+<td><strong>Mutável</strong> (pode ser atualizado com <code>setState</code>).</td>
+</tr>
+<tr>
+<td>Usado para <strong>comunicação entre componentes</strong>.</td>
+<td>Usado para <strong>controle interno do componente</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exemplo:</strong>  </p>
+<pre><code class="language-jsx">// Componente Pai (passa props)
+&lt;PaiComponente nome=&quot;João&quot; /&gt;  
+
+// Componente Filho (usa props + state)
+function FilhoComponente({ nome }) {
+  const [idade, setIdade] = useState(25); // Estado interno
+  return &lt;p&gt;{nome} tem {idade} anos.&lt;/p&gt;;
+}
+</code></pre>
+<hr />
+<h4 id="3-sintaxe-do-usestate"><strong>3. Sintaxe do <code>useState</code></strong></h4>
+<p>O <code>useState</code> é um <strong>Hook</strong> que retorna um array com:<br />
+1. <strong>Valor atual do estado</strong> (<code>state</code>).<br />
+2. <strong>Função para atualizá-lo</strong> (<code>setState</code>).  </p>
+<pre><code class="language-jsx">const [state, setState] = useState(initialValue);
+</code></pre>
+<p><strong>Exemplo:</strong>  </p>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0); // Estado inicial = 0
+
+  return (
+    &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+      Clicou {count} vezes
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<hr />
+<h4 id="4-atualizacoes-assincronas-e-imutabilidade"><strong>4. Atualizações Assíncronas e Imutabilidade</strong></h4>
+<h5 id="a-atualizacoes-assincronas"><strong>a) Atualizações Assíncronas</strong></h5>
+<ul>
+<li>O React <strong>não atualiza o estado imediatamente</strong> (é agendado).  </li>
+<li>Se precisar do <strong>valor anterior</strong>, use a forma funcional: </li>
+</ul>
+<p><code>jsx
+  setCount(prevCount =&gt; prevCount + 1); // Garante a atualização correta</code></p>
+<h4 id="b-imutabilidade"><strong>b) Imutabilidade</strong></h4>
+<ul>
+<li><strong>Nunca modifique o estado diretamente!</strong><br />
+  ❌ <code>state.count = 5</code> (Errado!)<br />
+  ✅ <code>setCount(5)</code> (Correto!)  </li>
+</ul>
+<p><strong>Exemplo com Objetos:</strong>  </p>
+<pre><code class="language-jsx">const [user, setUser] = useState({ name: 'Ana', age: 30 });
+
+// ❌ Errado (mutação direta)
+user.age = 31; // Não re-renderiza!
+
+// ✅ Correto (cria um novo objeto)
+setUser({ ...user, age: 31 }); // Spread operator
+</code></pre>
+<hr />
+<h4 id="resumo-visual"><strong>Resumo Visual</strong></h4>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+function Example() {
+  // 1. Declaração do estado
+  const [value, setValue] = useState('');
+
+  // 2. Atualização com imutabilidade
+  const handleChange = (e) =&gt; {
+    setValue(e.target.value); // ✅ Atualiza corretamente
+  };
+
+  return &lt;input value={value} onChange={handleChange} /&gt;;
+}
+</code></pre>
+<h3 id="boas-praticas"><strong>Boas Práticas:</strong></h3>
+<p>✔ Use <code>useState</code> para dados que mudam e afetam a UI.<br />
+✔ Atualize o estado <strong>apenas com <code>setState</code></strong> (nunca diretamente).<br />
+✔ Para estados complexos, considere <code>useReducer</code>.  </p>
+<h3 id="exemplo-pratico"><strong>Exemplo Prático:</strong></h3>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Você clicou {count} vezes&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Incrementar&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h3 id="exercicio"><strong>Exercício:</strong></h3>
+<ol>
+<li>Crie um componente <code>ToggleButton</code> que alterna entre "Ligado" e "Desligado".  </li>
+<li>Faça um contador que permita incrementar, decrementar e resetar o valor.  </li>
+</ol>
+<hr />
+<h3 id="2-useeffect-efeitos-colaterais"><strong>2. - useEffect (Efeitos Colaterais)</strong></h3>
+<h4 id="conteudo-teorico_1"><strong>Conteúdo Teórico:</strong></h4>
+<ul>
+<li>O que são efeitos colaterais? (API calls, subscriptions, timers).  </li>
+<li>Sintaxe:<br />
+<code>jsx
+  useEffect(() =&gt; { ... }, [dependencies]);</code></li>
+<li>Dependências vazias (<code>[]</code>) vs com dependências.  </li>
+<li>Cleanup function (<code>return () =&gt; { ... }</code>).  </li>
+</ul>
+<h4 id="exemplo-pratico_1"><strong>Exemplo Prático:</strong></h4>
+<pre><code class="language-jsx">import { useState, useEffect } from 'react';
+
+function Timer() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() =&gt; {
+    const interval = setInterval(() =&gt; {
+      setSeconds(prev =&gt; prev + 1);
+    }, 1000);
+
+    return () =&gt; clearInterval(interval); // Cleanup
+  }, []); // Executa apenas uma vez
+
+  return &lt;p&gt;Tempo: {seconds} segundos&lt;/p&gt;;
+}
+</code></pre>
+<h4 id="exercicio_1"><strong>Exercício:</strong></h4>
+<ol>
+<li>Crie um componente que busca dados de uma API (ex: <a href="https://jsonplaceholder.typicode.com/posts">JSONPlaceholder</a>) e exibe em uma lista.  </li>
+<li>Implemente um <code>useEffect</code> que atualize o título da página com um contador.  </li>
+</ol>
+<hr />
+<h3 id="3-createcontext-compartilhamento-de-estado"><strong>3. - createContext (Compartilhamento de Estado)</strong></h3>
+<ul>
+<li>Problema do "prop drilling".  </li>
+<li>Criar e consumir um Context.  </li>
+<li><code>createContext</code>, <code>Provider</code> e <code>useContext</code>.  </li>
+</ul>
+<h4 id="exemplo-pratico_2"><strong>Exemplo Prático:</strong></h4>
+<pre><code class="language-jsx">import { createContext, useContext, useState } from 'react';
+
+const ThemeContext = createContext();
+
+function App() {
+  const [theme, setTheme] = useState(&quot;light&quot;);
+
+  return (
+    &lt;ThemeContext.Provider value={{ theme, setTheme }}&gt;
+      &lt;Toolbar /&gt;
+    &lt;/ThemeContext.Provider&gt;
+  );
+}
+
+function Toolbar() {
+  const { theme, setTheme } = useContext(ThemeContext);
+
+  return (
+    &lt;button onClick={() =&gt; setTheme(theme === &quot;light&quot; ? &quot;dark&quot; : &quot;light&quot;)}&gt;
+      Tema atual: {theme}
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<h4 id="exercicio_2"><strong>Exercício:</strong></h4>
+<ol>
+<li>Crie um contexto <code>UserContext</code> que armazene o nome do usuário e permita alterá-lo.  </li>
+<li>Consuma esse contexto em dois componentes diferentes.  </li>
+</ol>
+<hr />
+<h3 id="4-useref-referencias-e-valores-mutaveis"><strong>4. - useRef (Referências e Valores Mutáveis)</strong></h3>
+<h4 id="conteudo-teorico_2"><strong>Conteúdo Teórico:</strong></h4>
+<ul>
+<li>Diferença entre <code>useRef</code> e <code>useState</code>.  </li>
+<li>Acessar elementos DOM diretamente.  </li>
+<li>Armazenar valores mutáveis sem rerenderizar.  </li>
+</ul>
+<h4 id="exemplo-pratico_3"><strong>Exemplo Prático:</strong></h4>
+<pre><code class="language-jsx">import { useRef } from 'react';
+
+function TextInput() {
+  const inputRef = useRef();
+
+  const focusInput = () =&gt; {
+    inputRef.current.focus();
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;input ref={inputRef} type=&quot;text&quot; /&gt;
+      &lt;button onClick={focusInput}&gt;Focar no Input&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h4 id="exercicio_3"><strong>Exercício:</strong></h4>
+<ol>
+<li>Crie um componente que armazene o número de renders usando <code>useRef</code>.  </li>
+<li>Faça um "scroll to top" usando <code>useRef</code>.  </li>
+</ol>
+<hr />
+<h3 id="5-usereducer-estado-complexo"><strong>5. - useReducer (Estado Complexo)</strong></h3>
+<h4 id="conteudo-teorico_3"><strong>Conteúdo Teórico:</strong></h4>
+<ul>
+<li>Quando usar <code>useReducer</code> vs <code>useState</code>.  </li>
+<li>Sintaxe:  </li>
+</ul>
+<p><code>jsx
+  const [state, dispatch] = useReducer(reducer, initialState);</code>
+- Padrão de ações (<code>{ type, payload }</code>).  </p>
+<h4 id="exemplo-pratico_4"><strong>Exemplo Prático:</strong></h4>
+<pre><code class="language-jsx">import { useReducer } from 'react';
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {state.count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: 'increment' })}&gt;+&lt;/button&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: 'decrement' })}&gt;-&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h4 id="exercicio_4"><strong>Exercício:</strong></h4>
+<ol>
+<li>Implemente um carrinho de compras usando <code>useReducer</code>.  </li>
+<li>Crie um formulário com validação usando <code>useReducer</code>.  </li>
+</ol>
+<hr />
+<h3 id="exercicio-final-do-modulo"><strong>Exercício Final do Módulo</strong></h3>
+<p><strong>Desafio:</strong> Construa um <strong>"Todo List"</strong> usando:  </p>
+<p>✅ <code>useState</code> para gerenciar a lista de tarefas.<br />
+✅ <code>useEffect</code> para salvar no <code>localStorage</code>.<br />
+✅ <code>useReducer</code> para ações como adicionar, remover e marcar como concluída.<br />
+✅ <code>useContext</code> para um tema claro/escuro.<br />
+✅ <code>useRef</code> para focar no input ao adicionar uma tarefa.  </p>
+<h3 id="todo-list-avancada-com-react-hooks">Todo List Avançada com React Hooks</h3>
+<p>Vou construir uma aplicação Todo List completa utilizando todos os Hooks solicitados. Vamos dividir em partes lógicas:</p>
+<h4 id="1-estrutura-inicial-e-contexto-de-tema">1. Estrutura Inicial e Contexto de Tema</h4>
+<pre><code class="language-jsx">import React, { useState, useEffect, useReducer, useContext, useRef, createContext } from 'react';
+
+// Contexto para o tema
+const ThemeContext = createContext();
+
+// Reducer para gerenciar as ações das tarefas
+function todoReducer(state, action) {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return [...state, { id: Date.now(), text: action.payload, completed: false }];
+    case 'TOGGLE_TODO':
+      return state.map(todo =&gt;
+        todo.id === action.payload ? { ...todo, completed: !todo.completed } : todo
+      );
+    case 'DELETE_TODO':
+      return state.filter(todo =&gt; todo.id !== action.payload);
+    default:
+      return state;
+  }
+}
+</code></pre>
+<h4 id="2-componente-principal-app">2. Componente Principal App</h4>
+<pre><code class="language-jsx">function App() {
+  const [theme, setTheme] = useState('light');
+  const [todos, dispatch] = useReducer(todoReducer, []);
+  const inputRef = useRef(null);
+
+  // Carregar tarefas do localStorage ao iniciar
+  useEffect(() =&gt; {
+    const savedTodos = localStorage.getItem('todos');
+    if (savedTodos) {
+      dispatch({ type: 'INIT_TODOS', payload: JSON.parse(savedTodos) });
+    }
+  }, []);
+
+  // Salvar tarefas no localStorage quando mudam
+  useEffect(() =&gt; {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
+  // Alternar tema
+  const toggleTheme = () =&gt; {
+    setTheme(prevTheme =&gt; prevTheme === 'light' ? 'dark' : 'light');
+  };
+
+  return (
+    &lt;ThemeContext.Provider value={{ theme, toggleTheme }}&gt;
+      &lt;div className={`app ${theme}`}&gt;
+        &lt;h1&gt;Todo List&lt;/h1&gt;
+        &lt;TodoForm dispatch={dispatch} inputRef={inputRef} /&gt;
+        &lt;TodoList todos={todos} dispatch={dispatch} /&gt;
+      &lt;/div&gt;
+    &lt;/ThemeContext.Provider&gt;
+  );
+}
+</code></pre>
+<h4 id="3-componente-todoform">3. Componente TodoForm</h4>
+<pre><code class="language-jsx">function TodoForm({ dispatch, inputRef }) {
+  const [text, setText] = useState('');
+  const { theme } = useContext(ThemeContext);
+
+  const handleSubmit = e =&gt; {
+    e.preventDefault();
+    if (text.trim()) {
+      dispatch({ type: 'ADD_TODO', payload: text });
+      setText('');
+      inputRef.current.focus();
+    }
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input
+        ref={inputRef}
+        type=&quot;text&quot;
+        value={text}
+        onChange={e =&gt; setText(e.target.value)}
+        placeholder=&quot;Adicione uma tarefa&quot;
+        className={`input-${theme}`}
+      /&gt;
+      &lt;button type=&quot;submit&quot; className={`button-${theme}`}&gt;Adicionar&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}
+</code></pre>
+<h4 id="4-componente-todolist">4. Componente TodoList</h4>
+<pre><code class="language-jsx">function TodoList({ todos, dispatch }) {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
+  if (todos.length === 0) {
+    return &lt;p className={`no-tasks-${theme}`}&gt;Nenhuma tarefa adicionada ainda&lt;/p&gt;;
+  }
+
+  return (
+    &lt;div&gt;
+      &lt;button onClick={toggleTheme} className={`theme-button ${theme}`}&gt;
+        Alternar para tema {theme === 'light' ? 'escuro' : 'claro'}
+      &lt;/button&gt;
+      &lt;ul className={`todo-list ${theme}`}&gt;
+        {todos.map(todo =&gt; (
+          &lt;TodoItem key={todo.id} todo={todo} dispatch={dispatch} /&gt;
+        ))}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h4 id="5-componente-todoitem">5. Componente TodoItem</h4>
+<pre><code class="language-jsx">function TodoItem({ todo, dispatch }) {
+  const { theme } = useContext(ThemeContext);
+
+  return (
+    &lt;li className={`todo-item ${theme} ${todo.completed ? 'completed' : ''}`}&gt;
+      &lt;span
+        onClick={() =&gt; dispatch({ type: 'TOGGLE_TODO', payload: todo.id })}
+        className=&quot;todo-text&quot;
+      &gt;
+        {todo.text}
+      &lt;/span&gt;
+      &lt;button
+        onClick={() =&gt; dispatch({ type: 'DELETE_TODO', payload: todo.id })}
+        className={`delete-button ${theme}`}
+      &gt;
+        ×
+      &lt;/button&gt;
+    &lt;/li&gt;
+  );
+}
+</code></pre>
+<h4 id="6-estilos-css-exemplo-basico">6. Estilos CSS (exemplo básico)</h4>
+<pre><code class="language-css">.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.light {
+  background-color: #fff;
+  color: #333;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.input-light {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.input-dark {
+  padding: 8px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: white;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+.todo-item.light {
+  background-color: #f5f5f5;
+}
+
+.todo-item.dark {
+  background-color: #444;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.delete-button.light {
+  color: #ff4444;
+}
+
+.delete-button.dark {
+  color: #ff8888;
+}
+
+.theme-button {
+  padding: 5px 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+</code></pre>
+<h4 id="7-como-usar-a-aplicacao">7. Como usar a aplicação</h4>
+<ol>
+<li><strong>Adicionar tarefa</strong>: Digite no campo de texto e pressione Enter ou clique em "Adicionar"</li>
+<li><strong>Completar tarefa</strong>: Clique no texto da tarefa</li>
+<li><strong>Remover tarefa</strong>: Clique no botão "×" ao lado da tarefa</li>
+<li><strong>Alternar tema</strong>: Clique no botão "Alternar tema"</li>
+</ol>
+<h4 id="recursos-utilizados">Recursos utilizados:</h4>
+<ul>
+<li><code>useState</code>: Para gerenciar o estado do tema e do texto do input</li>
+<li><code>useEffect</code>: Para persistir as tarefas no localStorage</li>
+<li><code>useReducer</code>: Para gerenciar as operações CRUD das tarefas</li>
+<li><code>useContext</code>: Para compartilhar o tema entre todos os componentes</li>
+<li><code>useRef</code>: Para focar automaticamente no input após adicionar uma tarefa</li>
+</ul>
+<hr />
+<h3 id="recursos-adicionais"><strong>Recursos Adicionais:</strong></h3>
+<ul>
+<li><a href="https://react.dev/reference/react">Documentação Oficial dos Hooks</a>  </li>
+<li><a href="https://react-hooks-cheatsheet.com/">React Hooks Cheat Sheet</a>  </li>
+</ul></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/yaml.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/python.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/html.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/css.min.js"></script>
+                <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/languages/javascript.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="../../js/open_in_new_tab.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
