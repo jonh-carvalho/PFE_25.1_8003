@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>13 - JavaScript JSON - PFE_25.1_8003</title>
+    <title>13 - Fetch - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -213,19 +213,19 @@
                         
                             
 <li >
-    <a href="../10_EventosControlados/">10 - Eventos controlados</a>
-</li>
-
-                        
-                            
-<li >
     <a href="../10_Http/">10 - Protocolo HTTP</a>
 </li>
 
                         
                             
 <li >
-    <a href="../12_Fetch/">12 - Fetch</a>
+    <a href="../11_EventosControlados/">11 - Eventos controlados</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../11_Lendo%20Dados/">11 Lendo Dados</a>
 </li>
 
                         
@@ -237,25 +237,13 @@
                         
                             
 <li class="active">
-    <a href="./">13 - JavaScript JSON</a>
+    <a href="./">13 - Fetch</a>
 </li>
 
                         
                             
 <li >
-    <a href="../14_Lendo%20Json/">14 - Lendo Dados em JavaScript</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../15_Lendo%20Dados%20React/">15 - Lendo Dados</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../16_JsonServer/">16 - JsonServer</a>
+    <a href="../14_Filtros/">14 - Filtros</a>
 </li>
 
                         
@@ -332,12 +320,12 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../14_Lendo%20Json/">
+                        <a rel="next" href="../14_Filtros/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/React/13_Json.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/React/13_Fetch.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -349,101 +337,86 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#13-javascript-json">13 - JavaScript JSON</a></li>
-            <li class="second-level"><a href="#introducao">Introdução</a></li>
+        <li class="first-level active"><a href="#13-fetch">13 - Fetch</a></li>
+            <li class="second-level"><a href="#caracteristicas-principais-do-fetch">Características principais do fetch:</a></li>
                 
-                <li class="third-level"><a href="#o-que-e-json">O que é JSON?</a></li>
-                <li class="third-level"><a href="#regras-de-sintaxe-json">Regras de sintaxe JSON</a></li>
-                <li class="third-level"><a href="#dados-json-um-nome-e-um-valor">Dados JSON - Um nome e um valor</a></li>
-                <li class="third-level"><a href="#objetos-json">Objetos JSON</a></li>
-                <li class="third-level"><a href="#matrizes-json">Matrizes JSON</a></li>
-                <li class="third-level"><a href="#convertendo-um-texto-json-em-um-objeto-javascript">Convertendo um texto JSON em um objeto JavaScript</a></li>
+            <li class="second-level"><a href="#exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do fetch:</a></li>
+                
+            <li class="second-level"><a href="#um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o fetch com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</a></li>
+                
+            <li class="second-level"><a href="#exemplo-de-requisicao-get">Exemplo de requisição GET</a></li>
+                
+            <li class="second-level"><a href="#exemplo-de-requisicao-post">Exemplo de requisição POST</a></li>
+                
+            <li class="second-level"><a href="#explicacao">Explicação:</a></li>
+                
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="13-javascript-json">13 - JavaScript JSON</h1>
-<h2 id="introducao">Introdução</h2>
-<p>JSON é um formato para armazenar e transportar dados.</p>
-<p>O JSON é frequentemente usado quando os dados são enviados de um servidor para uma web página.</p>
-<h3 id="o-que-e-json">O que é JSON?</h3>
+<h1 id="13-fetch">13 - Fetch</h1>
+<p><code>fetch</code> é uma API nativa do JavaScript que permite realizar requisições HTTP de forma simples e moderna. Ela é usada principalmente para buscar (ou "fetch") recursos de um servidor, como dados de uma API, arquivos ou outros tipos de conteúdo. O <code>fetch</code> retorna uma <em>Promise</em>, o que significa que ele trabalha de forma assíncrona, permitindo que o JavaScript continue a executar outras operações enquanto a requisição está em andamento.</p>
+<h3 id="caracteristicas-principais-do-fetch">Características principais do <code>fetch</code>:</h3>
+<ol>
+<li><strong>Simplicidade</strong>: Comparado ao antigo <code>XMLHttpRequest</code>, o <code>fetch</code> possui uma sintaxe muito mais fácil de usar.</li>
+<li><strong>Promessas (Promises)</strong>: O <code>fetch</code> retorna uma <code>Promise</code>, o que facilita o tratamento de operações assíncronas.</li>
+<li><strong>Suporte a múltiplos métodos HTTP</strong>: Pode ser usado para diferentes tipos de requisições, como <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>, etc.</li>
+<li><strong>Configuração flexível</strong>: Permite configurar cabeçalhos, enviar dados no corpo da requisição, e muito mais.</li>
+</ol>
+<h3 id="exemplo-basico-de-uso-do-fetch">Exemplo básico de uso do <code>fetch</code>:</h3>
+<pre><code class="language-javascript">fetch('https://api.exemplo.com/dados')
+  .then(response =&gt; response.json())  // Converte a resposta para JSON
+  .then(data =&gt; console.log(data))    // Exibe os dados no console
+  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
+</code></pre>
+<p>Neste exemplo, o <code>fetch</code> faz uma requisição <code>GET</code> para a URL fornecida, processa a resposta como JSON, e lida com possíveis erros.</p>
+<h3 id="um-exemplo-de-como-usar-o-fetch-com-a-api-do-jsonplaceholder-uma-api-publica-para-testes-e-prototipagem">Um exemplo de como usar o <code>fetch</code> com a API do JSONPlaceholder, uma API pública para testes e prototipagem:</h3>
+<h3 id="exemplo-de-requisicao-get">Exemplo de requisição <code>GET</code></h3>
+<p>Neste exemplo, vamos buscar uma lista de posts da API usando o <code>fetch</code>.</p>
+<pre><code class="language-javascript">// Fazendo uma requisição GET para obter posts da API JSONPlaceholder
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response =&gt; {
+    if (!response.ok) {
+      throw new Error('Erro na requisição: ' + response.status);
+    }
+    return response.json();  // Converte a resposta para JSON
+  })
+  .then(posts =&gt; {
+    console.log(posts);  // Exibe os posts no console
+  })
+  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
+</code></pre>
+<h3 id="exemplo-de-requisicao-post">Exemplo de requisição <code>POST</code></h3>
+<p>Neste exemplo, vamos enviar um novo post para a API com uma requisição <code>POST</code>.</p>
+<pre><code class="language-javascript">// Enviando dados para criar um novo post
+fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    title: 'Meu novo post',
+    body: 'Este é o conteúdo do post',
+    userId: 1
+  }),
+})
+  .then(response =&gt; {
+    if (!response.ok) {
+      throw new Error('Erro na requisição: ' + response.status);
+    }
+    return response.json();  // Converte a resposta para JSON
+  })
+  .then(post =&gt; {
+    console.log('Post criado:', post);  // Exibe o post criado
+  })
+  .catch(error =&gt; console.error('Erro:', error));  // Lida com erros
+</code></pre>
+<h3 id="explicacao">Explicação:</h3>
 <ul>
-<li>JSON significa JavaScript Object Notation</li>
-<li>JSON é um formato leve de intercâmbio de dados</li>
-<li>JSON é independente de idioma *</li>
-<li>JSON é "autodescritivo" e fácil de entender</li>
+<li><strong>GET</strong>: O primeiro exemplo faz uma requisição para obter uma lista de posts, e a resposta é convertida para JSON e exibida no console.</li>
+<li><strong>POST</strong>: No segundo exemplo, criamos um novo post com os campos <code>title</code>, <code>body</code> e <code>userId</code>, enviando esses dados como JSON no corpo da requisição.</li>
 </ul>
-<blockquote>
-<p>A sintaxe JSON é derivada da sintaxe de notação de objeto JavaScript, mas o formato JSON é apenas texto. O código para leitura e geração de dados JSON pode ser escrito em qualquer programação Idioma.</p>
-</blockquote>
-<h4 id="exemplo-de-json">Exemplo de JSON</h4>
-<p>Essa sintaxe JSON define um objeto employees: uma matriz de 3 registros de funcionários (objetos):</p>
-<pre><code class="language-js">{
-&quot;employees&quot;:[
-  {&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
-  {&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
-  {&quot;firstName&quot;:&quot;Peter&quot;, &quot;lastName&quot;:&quot;Jones&quot;}
-]
-}
-</code></pre>
-<p>O formato JSON é avaliado como objetos JavaScript</p>
-<p><strong>O formato JSON é sintaticamente idêntico ao código para criar Objetos JavaScript.</strong></p>
-<p>Devido a essa semelhança, um programa JavaScript pode facilmente converter dados JSON em nativos Objetos JavaScript.</p>
-<h3 id="regras-de-sintaxe-json">Regras de sintaxe JSON</h3>
-<ul>
-<li>Os dados estão em pares de nome/valor</li>
-<li>Os dados são separados por vírgulas</li>
-<li>Chaves seguram objetos</li>
-<li>Os colchetes contêm matrizes</li>
-</ul>
-<h3 id="dados-json-um-nome-e-um-valor">Dados JSON - Um nome e um valor</h3>
-<p>Os dados JSON são gravados como pares de nome/valor, assim como o objeto JavaScript Propriedades.</p>
-<p>Um par nome/valor consiste em um nome de campo (entre aspas duplas), seguido por dois pontos, seguido por um valor:</p>
-<pre><code class="language-js">&quot;firstName&quot;:&quot;John&quot;
-</code></pre>
-<p><strong>Os nomes JSON exigem aspas duplas. Nomes JavaScript não.</strong></p>
-<h3 id="objetos-json">Objetos JSON</h3>
-<p>Os objetos JSON são gravados dentro de chaves.</p>
-<p>Assim como em JavaScript, os objetos podem conter vários pares de nome/valor:</p>
-<pre><code class="language-js">{&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;}
-</code></pre>
-<h3 id="matrizes-json">Matrizes JSON</h3>
-<p>As matrizes JSON são escritas entre colchetes.</p>
-<p>Assim como em JavaScript, um array pode conter objetos:</p>
-<pre><code class="language-js">&quot;employees&quot;:[
-  {&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
-  {&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
-  {&quot;firstName&quot;:&quot;Peter&quot;, &quot;lastName&quot;:&quot;Jones&quot;}
-]
-</code></pre>
-<p>No exemplo acima, o objeto "funcionários" é uma matriz. Ele contém três Objetos.</p>
-<p>Cada objeto é um registro de uma pessoa (com um nome e um sobrenome).</p>
-<h3 id="convertendo-um-texto-json-em-um-objeto-javascript">Convertendo um texto JSON em um objeto JavaScript</h3>
-<p>Um uso comum do JSON é ler dados de um servidor web, e exibir os dados em uma página da web.</p>
-<p>Para simplificar, isso pode ser demonstrado usando uma string como entrada.</p>
-<p>Primeiro, crie uma string JavaScript contendo a sintaxe JSON:</p>
-<p>let text = '{ "employees" : [' +
-'{ "firstName":"John" , "lastName":"Doe" },' +
-'{ "firstName":"Anna" , "lastName":"Smith" },' +
-'{ "firstName":"Peter" , "lastName":"Jones" } ]}';</p>
-<pre><code class="language-js">let text = '{ &quot;employees&quot; : [' +
-'{ &quot;firstName&quot;:&quot;John&quot; , &quot;lastName&quot;:&quot;Doe&quot; },' +
-'{ &quot;firstName&quot;:&quot;Anna&quot; , &quot;lastName&quot;:&quot;Smith&quot; },' +
-'{ &quot;firstName&quot;:&quot;Peter&quot; , &quot;lastName&quot;:&quot;Jones&quot; } ]}';
-</code></pre>
-<p>Em seguida, use a função interna do JavaScript para converter a string em um objeto JavaScript:JSON.parse()</p>
-<pre><code class="language-js">const obj = JSON.parse(text);
-</code></pre>
-<p>Por fim, use o novo objeto JavaScript em sua página:</p>
-<pre><code class="language-html">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
-
-&lt;script&gt;
-document.getElementById(&quot;demo&quot;).innerHTML =
-obj.employees[1].firstName + &quot; &quot; + obj.employees[1].lastName;
-&lt;/script&gt;
-</code></pre>
-<p>const obj = JSON.parse(text);
-obj.employees[1].firstName + " " + obj.employees[1].lastName;</p></div>
+<p>A API do JSONPlaceholder é ótima para testes rápidos e experimentação com <code>fetch</code>.</p></div>
         
         
     </div>

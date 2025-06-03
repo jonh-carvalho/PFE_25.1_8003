@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>16 - JsonServer - PFE_25.1_8003</title>
+    <title>11 - Eventos controlados - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -213,19 +213,19 @@
                         
                             
 <li >
-    <a href="../10_EventosControlados/">10 - Eventos controlados</a>
-</li>
-
-                        
-                            
-<li >
     <a href="../10_Http/">10 - Protocolo HTTP</a>
 </li>
 
                         
                             
+<li class="active">
+    <a href="./">11 - Eventos controlados</a>
+</li>
+
+                        
+                            
 <li >
-    <a href="../12_Fetch/">12 - Fetch</a>
+    <a href="../11_Lendo%20Dados/">11 Lendo Dados</a>
 </li>
 
                         
@@ -237,25 +237,13 @@
                         
                             
 <li >
-    <a href="../13_Json/">13 - JavaScript JSON</a>
+    <a href="../13_Fetch/">13 - Fetch</a>
 </li>
 
                         
                             
 <li >
-    <a href="../14_Lendo%20Json/">14 - Lendo Dados em JavaScript</a>
-</li>
-
-                        
-                            
-<li >
-    <a href="../15_Lendo%20Dados%20React/">15 - Lendo Dados</a>
-</li>
-
-                        
-                            
-<li class="active">
-    <a href="./">16 - JsonServer</a>
+    <a href="../14_Filtros/">14 - Filtros</a>
 </li>
 
                         
@@ -327,17 +315,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../15_Lendo%20Dados%20React/">
+                        <a rel="prev" href="../10_Http/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../../_Design%20Thinking/5w2h/">
+                        <a rel="next" href="../11_Lendo%20Dados/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/React/16_JsonServer.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/React/11_EventosControlados.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -349,148 +337,143 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#16-jsonserver">16 - JsonServer</a></li>
-            <li class="second-level"><a href="#introducao-ao-json-server">Introdução ao json-server</a></li>
+        <li class="first-level active"><a href="#11-eventos-controlados">11 - Eventos controlados</a></li>
+            <li class="second-level"><a href="#introducao">Introdução</a></li>
                 
-                <li class="third-level"><a href="#passo-1-instalar-o-json-server">Passo 1: Instalar o JSON Server</a></li>
-                <li class="third-level"><a href="#passo-2-criar-o-arquivo-dbjson">Passo 2: Criar o Arquivo db.json</a></li>
-                <li class="third-level"><a href="#passo-3-executar-o-json-server">Passo 3: Executar o JSON Server</a></li>
-                <li class="third-level"><a href="#endpoints-criados-pelo-json-server">Endpoints Criados pelo json-server</a></li>
-                <li class="third-level"><a href="#passo-4-consumir-a-api-com-fetch">Passo 4: Consumir a API com fetch</a></li>
-                <li class="third-level"><a href="#explicacao-do-funcionamento">Explicação do Funcionamento</a></li>
-                <li class="third-level"><a href="#manipulando-outros-endpoints">Manipulando Outros Endpoints</a></li>
+                <li class="third-level"><a href="#caracteristicas-dos-eventos-controlados">📌 Características dos Eventos Controlados</a></li>
+                <li class="third-level"><a href="#como-funciona">🔄 Como Funciona?</a></li>
+                <li class="third-level"><a href="#exemplo-pratico">📝 Exemplo Prático</a></li>
+                <li class="third-level"><a href="#eventos-nao-controlados-uncontrolled">🆚 Eventos NÃO Controlados (Uncontrolled)</a></li>
+                <li class="third-level"><a href="#vantagens-dos-eventos-controlados">✅ Vantagens dos Eventos Controlados</a></li>
+                <li class="third-level"><a href="#conclusao">🔹 Conclusão</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="16-jsonserver">16 - JsonServer</h1>
-<h2 id="introducao-ao-json-server">Introdução ao json-server</h2>
-<p>Vou te mostrar como criar uma API simples usando o <code>json-server</code> para simular uma API RESTful, baseado nos exemplos anteriores com dados de posts e usuários.</p>
-<h3 id="passo-1-instalar-o-json-server">Passo 1: Instalar o JSON Server</h3>
-<p>Se você ainda não tem o <code>json-server</code>, pode instalá-lo globalmente com o npm:</p>
-<pre><code class="language-bash">npm install -g json-server
-</code></pre>
-<h3 id="passo-2-criar-o-arquivo-dbjson">Passo 2: Criar o Arquivo <code>db.json</code></h3>
-<p>Esse arquivo conterá os dados que serão expostos pela API. Crie um arquivo chamado <code>db.json</code> na pasta do projeto e insira os seguintes dados:</p>
-<pre><code class="language-json">{
-  &quot;posts&quot;: [
-    {
-      &quot;id&quot;: 1,
-      &quot;title&quot;: &quot;Primeiro Post&quot;,
-      &quot;body&quot;: &quot;Conteúdo do primeiro post.&quot;
-    },
-    {
-      &quot;id&quot;: 2,
-      &quot;title&quot;: &quot;Segundo Post&quot;,
-      &quot;body&quot;: &quot;Conteúdo do segundo post.&quot;
-    },
-    {
-      &quot;id&quot;: 3,
-      &quot;title&quot;: &quot;Terceiro Post&quot;,
-      &quot;body&quot;: &quot;Conteúdo do terceiro post.&quot;
-    }
-  ],
-  &quot;users&quot;: [
-    {
-      &quot;id&quot;: 1,
-      &quot;nome&quot;: &quot;Maria&quot;,
-      &quot;idade&quot;: 30,
-      &quot;cidade&quot;: &quot;São Paulo&quot;
-    },
-    {
-      &quot;id&quot;: 2,
-      &quot;nome&quot;: &quot;Carlos&quot;,
-      &quot;idade&quot;: 25,
-      &quot;cidade&quot;: &quot;Rio de Janeiro&quot;
-    },
-    {
-      &quot;id&quot;: 3,
-      &quot;nome&quot;: &quot;Ana&quot;,
-      &quot;idade&quot;: 28,
-      &quot;cidade&quot;: &quot;Salvador&quot;
-    }
-  ]
-}
-</code></pre>
-<ul>
-<li><strong>Posts</strong>: Simula uma lista de posts com <code>id</code>, <code>title</code> e <code>body</code>.</li>
-<li><strong>Users</strong>: Simula uma lista de usuários com <code>id</code>, <code>nome</code>, <code>idade</code> e <code>cidade</code>.</li>
-</ul>
-<h3 id="passo-3-executar-o-json-server">Passo 3: Executar o JSON Server</h3>
-<p>Agora que temos o <code>db.json</code> configurado, inicie o <code>json-server</code> com o seguinte comando:</p>
-<pre><code class="language-bash">json-server --watch db.json --port 3000
-</code></pre>
-<blockquote>
-<p>Aqui, o servidor será iniciado na porta 3000. Você pode mudar a porta conforme necessário.</p>
-</blockquote>
-<h3 id="endpoints-criados-pelo-json-server">Endpoints Criados pelo <code>json-server</code></h3>
-<p>Com o JSON Server, os dados em <code>db.json</code> são automaticamente transformados em endpoints RESTful. Aqui estão alguns endpoints que serão criados automaticamente:</p>
-<ul>
-<li><strong>GET /posts</strong> – Retorna todos os posts.</li>
-<li><strong>GET /posts/{id}</strong> – Retorna um post específico pelo <code>id</code>.</li>
-<li><strong>POST /posts</strong> – Adiciona um novo post.</li>
-<li><strong>PUT /posts/{id}</strong> – Atualiza um post pelo <code>id</code>.</li>
-<li><strong>DELETE /posts/{id}</strong> – Deleta um post pelo <code>id</code>.</li>
-<li><strong>GET /users</strong> – Retorna todos os usuários.</li>
-<li><strong>GET /users/{id}</strong> – Retorna um usuário específico pelo <code>id</code>.</li>
-</ul>
-<h3 id="passo-4-consumir-a-api-com-fetch">Passo 4: Consumir a API com <code>fetch</code></h3>
-<p>Com a API rodando no <code>json-server</code>, você pode consumir os dados a partir de uma página HTML. Vou mostrar um exemplo de como listar os títulos dos posts.</p>
-<h4 id="arquivo-indexhtml">Arquivo <code>index.html</code></h4>
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;pt-br&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Consumindo API com JSON Server&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Posts da API Local&lt;/h1&gt;
-    &lt;ul id=&quot;postsList&quot;&gt;&lt;/ul&gt;
-
-    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<h4 id="arquivo-scriptjs">Arquivo <code>script.js</code></h4>
-<pre><code class="language-javascript">// URL da API local do JSON Server
-const apiUrl = 'http://localhost:3000/posts';
-
-// Função para buscar e exibir os posts
-function fetchPosts() {
-  fetch(apiUrl)
-    .then(response =&gt; {
-      if (!response.ok) {
-        throw new Error('Erro ao obter dados da API');
-      }
-      return response.json(); // Converte a resposta em JSON
-    })
-    .then(data =&gt; {
-      const postsList = document.getElementById('postsList');
-      // Itera pelos posts e cria itens de lista
-      data.forEach(post =&gt; {
-        const listItem = document.createElement('li');
-        listItem.textContent = post.title;
-        postsList.appendChild(listItem);
-      });
-    })
-    .catch(error =&gt; {
-      console.error(error);
-      document.getElementById('postsList').textContent = 'Erro ao carregar os posts';
-    });
-}
-
-// Chama a função ao carregar a página
-fetchPosts();
-</code></pre>
-<h3 id="explicacao-do-funcionamento">Explicação do Funcionamento</h3>
+<h1 id="11-eventos-controlados">11 - Eventos controlados</h1>
+<p>No React, <strong>eventos controlados</strong> são uma forma de gerenciar elementos de formulários (como <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>) onde o <strong>valor exibido no elemento é totalmente controlado pelo estado (state) do React</strong>, e as mudanças nesse valor são tratadas por funções de callback (como <code>onChange</code>).</p>
+<hr />
+<h2 id="introducao">Introdução</h2>
+<h3 id="caracteristicas-dos-eventos-controlados"><strong>📌 Características dos Eventos Controlados</strong></h3>
 <ol>
-<li><strong>Servidor JSON</strong>: Com <code>json-server</code>, a API local expõe endpoints para os dados em <code>db.json</code>.</li>
-<li><strong>HTML e JavaScript</strong>: O arquivo <code>script.js</code> faz uma requisição GET para <code>http://localhost:3000/posts</code> e exibe os títulos dos posts.</li>
-<li><strong>Teste</strong>: Abra o <code>index.html</code> em um navegador com o <code>json-server</code> rodando. Os títulos dos posts serão exibidos na lista.</li>
+<li><strong>O valor do elemento é sincronizado com o estado do React</strong>  </li>
+<li>O React é a "fonte da verdade" (single source of truth).</li>
+<li><strong>Toda alteração passa por um <code>onChange</code> (ou evento similar)</strong>  </li>
+<li>O React atualiza o estado, que por sua vez atualiza o valor exibido.</li>
+<li><strong>São a forma recomendada para formulários no React</strong>  </li>
+<li>Melhor controle sobre os dados.</li>
 </ol>
-<h3 id="manipulando-outros-endpoints">Manipulando Outros Endpoints</h3>
-<p>Para acessar os dados de usuários (<code>/users</code>), basta alterar a URL no <code>fetch</code> para <code>http://localhost:3000/users</code>.</p></div>
+<hr />
+<h3 id="como-funciona"><strong>🔄 Como Funciona?</strong></h3>
+<ol>
+<li>O valor do input é definido por uma variável de estado (<code>useState</code>).</li>
+<li>Quando o usuário digita, o evento <code>onChange</code> é disparado.</li>
+<li>O React atualiza o estado com o novo valor.</li>
+<li>O componente é renderizado novamente, refletindo a mudança.</li>
+</ol>
+<hr />
+<h3 id="exemplo-pratico"><strong>📝 Exemplo Prático</strong></h3>
+<h4 id="input-controlado"><strong>Input Controlado</strong></h4>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+function ControlledInput() {
+  const [text, setText] = useState(''); // Estado controla o valor
+
+  const handleChange = (e) =&gt; {
+    setText(e.target.value); // Atualiza o estado
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;input
+        type=&quot;text&quot;
+        value={text} // Valor sincronizado com o estado
+        onChange={handleChange} // Atualiza o estado quando o usuário digita
+      /&gt;
+      &lt;p&gt;Texto digitado: {text}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<h4 id="formulario-controlado"><strong>Formulário Controlado</strong></h4>
+<pre><code class="language-jsx">import { useState } from 'react';
+
+function LoginForm() {
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleChange = (e) =&gt; {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value, // Atualiza apenas o campo alterado
+    });
+  };
+
+  const handleSubmit = (e) =&gt; {
+    e.preventDefault();
+    console.log('Dados enviados:', formData);
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input
+        type=&quot;email&quot;
+        name=&quot;email&quot;
+        value={formData.email}
+        onChange={handleChange}
+      /&gt;
+      &lt;input
+        type=&quot;password&quot;
+        name=&quot;password&quot;
+        value={formData.password}
+        onChange={handleChange}
+      /&gt;
+      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}
+</code></pre>
+<hr />
+<h3 id="eventos-nao-controlados-uncontrolled"><strong>🆚 Eventos NÃO Controlados (Uncontrolled)</strong></h3>
+<ul>
+<li><strong>Não são sincronizados com o estado do React</strong>.</li>
+<li>Usam <code>ref</code> para acessar o valor diretamente do DOM.</li>
+<li>Úteis para integração com bibliotecas externas ou quando o desempenho é crítico.</li>
+</ul>
+<p><strong>Exemplo de Input NÃO Controlado:</strong></p>
+<pre><code class="language-jsx">import { useRef } from 'react';
+
+function UncontrolledInput() {
+  const inputRef = useRef();
+
+  const handleClick = () =&gt; {
+    alert(`Valor digitado: ${inputRef.current.value}`);
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;input type=&quot;text&quot; ref={inputRef} /&gt;
+      &lt;button onClick={handleClick}&gt;Mostrar Valor&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<hr />
+<h3 id="vantagens-dos-eventos-controlados"><strong>✅ Vantagens dos Eventos Controlados</strong></h3>
+<p>✔ <strong>Validação em tempo real</strong> (ex: bloquear caracteres inválidos).<br />
+✔ <strong>Fácil manipulação antes de enviar dados</strong> (ex: formatação).<br />
+✔ <strong>Integração com outros estados</strong> (ex: habilitar/desabilitar botões).<br />
+✔ <strong>Mais previsível e alinhado com o fluxo do React</strong>.</p>
+<hr />
+<h3 id="conclusao"><strong>🔹 Conclusão</strong></h3>
+<ul>
+<li><strong>Controlados</strong>: O React gerencia o estado do input (<code>value</code> + <code>onChange</code>).  </li>
+<li><strong>Não controlados</strong>: O DOM gerencia o valor (acessado via <code>ref</code>).  </li>
+</ul>
+<p><strong>Use eventos controlados na maioria dos casos</strong> para manter a consistência e facilitar o gerenciamento de formulários no React. 🚀</p></div>
         
         
     </div>
