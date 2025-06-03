@@ -1,4 +1,4 @@
-# 15 - Lendo Dados 
+# 16 - Lendo Dados 
 
 Exibir dados no seu aplicativo Vite com React usando três abordagens diferentes: com `const`, importação direta e usando `fetch`.
 

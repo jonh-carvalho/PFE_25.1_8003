@@ -1,4 +1,4 @@
-# 14 - Lendo Dados em JavaScript
+# 15 - Lendo Dados em JavaScript
 
 Ler dados em JavaScript pode ser feito de várias formas dependendo da origem dos dados. Vou te mostrar três abordagens comuns: 
 
