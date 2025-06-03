@@ -1,4 +1,8 @@
+<<<<<<< HEAD:docs/React/11_EventosControlados.md
 # 11 - Eventos controlados
+=======
+# 10 - Eventos controlados
+>>>>>>> d46e8db3a63d2bf903cd848dcde7c49ecfadaffe:docs/React/10_EventosControlados.md
 
 No React, **eventos controlados** são uma forma de gerenciar elementos de formulários (como `<input>`, `<textarea>`, `<select>`) onde o **valor exibido no elemento é totalmente controlado pelo estado (state) do React**, e as mudanças nesse valor são tratadas por funções de callback (como `onChange`).
 

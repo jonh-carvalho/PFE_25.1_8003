@@ -18,8 +18,8 @@
 |__14__ - 20/05/25   | React - |
 |__15__ - 27/05/25   | React - Sprint IV -Site React/Components|
 |__16__ - 03/06/25   | React |
-|__17__ - 10/06/25   | React - Sprint V - Site Completo|
-|__18__ - 17/06/25   | AP2 - Apresentação |
+|__17__ - 10/06/25   | AP2 - Apresentação - Sprint V - Site Completo |
+|__18__ - 17/06/25   | -- |
 |__19__ - 24/06/25   | AS |
 <!-- | __03__ - 22/08/24   | - Apresentação de Tema do Projeto<br>- Configuração de [ Ambiente de Desenvolvimento](https://liveestacio-my.sharepoint.com/:w:/g/personal/00661711722_professores_ibmec_edu_br/EU2fCcJwgTFLvWNyOSUtNWABAykAdvtuiY2eOTitau10zA?e=NyuXZm)<br> |
 | __04__ - 29/08/24   | - Site Mkdocs<br>- Roteiro Github<br>- Configuração repositório Github<br>- Apresentação de Tema do Projeto<br>- Principais Funcionalidades do Projeto |
