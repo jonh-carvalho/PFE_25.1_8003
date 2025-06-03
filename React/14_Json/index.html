@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="../../img/favicon.ico">
 
     
-    <title>11 - Eventos controlados - PFE_25.1_8003</title>
+    <title>14 - JavaScript JSON - PFE_25.1_8003</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -213,19 +213,13 @@
                         
                             
 <li >
-    <a href="../10_Http/">10 - Protocolo HTTP</a>
-</li>
-
-                        
-                            
-<li class="active">
-    <a href="./">11 - Eventos controlados</a>
+    <a href="../10_EventosControlados/">10 - Eventos controlados</a>
 </li>
 
                         
                             
 <li >
-    <a href="../11_Lendo%20Dados/">11 Lendo Dados</a>
+    <a href="../11_Http/">11 - Protocolo HTTP</a>
 </li>
 
                         
@@ -242,8 +236,32 @@
 
                         
                             
+<li class="active">
+    <a href="./">14 - JavaScript JSON</a>
+</li>
+
+                        
+                            
 <li >
-    <a href="../14_Filtros/">14 - Filtros</a>
+    <a href="../15_Lendo%20Json/">15 - Lendo Dados em JavaScript</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../16_Lendo%20Dados%20React/">16 - Lendo Dados</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../17_JsonServer/">17 - JsonServer</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../18_Filtros/">18 - Filtros</a>
 </li>
 
                         
@@ -315,17 +333,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                     <li >
-                        <a rel="prev" href="../10_Http/">
+                        <a rel="prev" href="../13_Fetch/">
                             <i class="fas fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="next" href="../11_Lendo%20Dados/">
+                        <a rel="next" href="../15_Lendo%20Json/">
                             Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/React/11_EventosControlados.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                        <a href="https://github.com/jonh-carvalho/PFE_25.1_8003/edit/master/docs/React/14_Json.md"><i class="fab fa-github"></i> Edit on GitHub</a>
                     </li>
             </ul>
         </div>
@@ -337,143 +355,101 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#11-eventos-controlados">11 - Eventos controlados</a></li>
+        <li class="first-level active"><a href="#14-javascript-json">14 - JavaScript JSON</a></li>
             <li class="second-level"><a href="#introducao">Introdução</a></li>
                 
-                <li class="third-level"><a href="#caracteristicas-dos-eventos-controlados">📌 Características dos Eventos Controlados</a></li>
-                <li class="third-level"><a href="#como-funciona">🔄 Como Funciona?</a></li>
-                <li class="third-level"><a href="#exemplo-pratico">📝 Exemplo Prático</a></li>
-                <li class="third-level"><a href="#eventos-nao-controlados-uncontrolled">🆚 Eventos NÃO Controlados (Uncontrolled)</a></li>
-                <li class="third-level"><a href="#vantagens-dos-eventos-controlados">✅ Vantagens dos Eventos Controlados</a></li>
-                <li class="third-level"><a href="#conclusao">🔹 Conclusão</a></li>
+                <li class="third-level"><a href="#o-que-e-json">O que é JSON?</a></li>
+                <li class="third-level"><a href="#regras-de-sintaxe-json">Regras de sintaxe JSON</a></li>
+                <li class="third-level"><a href="#dados-json-um-nome-e-um-valor">Dados JSON - Um nome e um valor</a></li>
+                <li class="third-level"><a href="#objetos-json">Objetos JSON</a></li>
+                <li class="third-level"><a href="#matrizes-json">Matrizes JSON</a></li>
+                <li class="third-level"><a href="#convertendo-um-texto-json-em-um-objeto-javascript">Convertendo um texto JSON em um objeto JavaScript</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h1 id="11-eventos-controlados">11 - Eventos controlados</h1>
-<p>No React, <strong>eventos controlados</strong> são uma forma de gerenciar elementos de formulários (como <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>) onde o <strong>valor exibido no elemento é totalmente controlado pelo estado (state) do React</strong>, e as mudanças nesse valor são tratadas por funções de callback (como <code>onChange</code>).</p>
-<hr />
+<h1 id="14-javascript-json">14 - JavaScript JSON</h1>
 <h2 id="introducao">Introdução</h2>
-<h3 id="caracteristicas-dos-eventos-controlados"><strong>📌 Características dos Eventos Controlados</strong></h3>
-<ol>
-<li><strong>O valor do elemento é sincronizado com o estado do React</strong>  </li>
-<li>O React é a "fonte da verdade" (single source of truth).</li>
-<li><strong>Toda alteração passa por um <code>onChange</code> (ou evento similar)</strong>  </li>
-<li>O React atualiza o estado, que por sua vez atualiza o valor exibido.</li>
-<li><strong>São a forma recomendada para formulários no React</strong>  </li>
-<li>Melhor controle sobre os dados.</li>
-</ol>
-<hr />
-<h3 id="como-funciona"><strong>🔄 Como Funciona?</strong></h3>
-<ol>
-<li>O valor do input é definido por uma variável de estado (<code>useState</code>).</li>
-<li>Quando o usuário digita, o evento <code>onChange</code> é disparado.</li>
-<li>O React atualiza o estado com o novo valor.</li>
-<li>O componente é renderizado novamente, refletindo a mudança.</li>
-</ol>
-<hr />
-<h3 id="exemplo-pratico"><strong>📝 Exemplo Prático</strong></h3>
-<h4 id="input-controlado"><strong>Input Controlado</strong></h4>
-<pre><code class="language-jsx">import { useState } from 'react';
-
-function ControlledInput() {
-  const [text, setText] = useState(''); // Estado controla o valor
-
-  const handleChange = (e) =&gt; {
-    setText(e.target.value); // Atualiza o estado
-  };
-
-  return (
-    &lt;div&gt;
-      &lt;input
-        type=&quot;text&quot;
-        value={text} // Valor sincronizado com o estado
-        onChange={handleChange} // Atualiza o estado quando o usuário digita
-      /&gt;
-      &lt;p&gt;Texto digitado: {text}&lt;/p&gt;
-    &lt;/div&gt;
-  );
-}
-</code></pre>
-<h4 id="formulario-controlado"><strong>Formulário Controlado</strong></h4>
-<pre><code class="language-jsx">import { useState } from 'react';
-
-function LoginForm() {
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
-
-  const handleChange = (e) =&gt; {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value, // Atualiza apenas o campo alterado
-    });
-  };
-
-  const handleSubmit = (e) =&gt; {
-    e.preventDefault();
-    console.log('Dados enviados:', formData);
-  };
-
-  return (
-    &lt;form onSubmit={handleSubmit}&gt;
-      &lt;input
-        type=&quot;email&quot;
-        name=&quot;email&quot;
-        value={formData.email}
-        onChange={handleChange}
-      /&gt;
-      &lt;input
-        type=&quot;password&quot;
-        name=&quot;password&quot;
-        value={formData.password}
-        onChange={handleChange}
-      /&gt;
-      &lt;button type=&quot;submit&quot;&gt;Entrar&lt;/button&gt;
-    &lt;/form&gt;
-  );
-}
-</code></pre>
-<hr />
-<h3 id="eventos-nao-controlados-uncontrolled"><strong>🆚 Eventos NÃO Controlados (Uncontrolled)</strong></h3>
+<p>JSON é um formato para armazenar e transportar dados.</p>
+<p>O JSON é frequentemente usado quando os dados são enviados de um servidor para uma web página.</p>
+<h3 id="o-que-e-json">O que é JSON?</h3>
 <ul>
-<li><strong>Não são sincronizados com o estado do React</strong>.</li>
-<li>Usam <code>ref</code> para acessar o valor diretamente do DOM.</li>
-<li>Úteis para integração com bibliotecas externas ou quando o desempenho é crítico.</li>
+<li>JSON significa JavaScript Object Notation</li>
+<li>JSON é um formato leve de intercâmbio de dados</li>
+<li>JSON é independente de idioma *</li>
+<li>JSON é "autodescritivo" e fácil de entender</li>
 </ul>
-<p><strong>Exemplo de Input NÃO Controlado:</strong></p>
-<pre><code class="language-jsx">import { useRef } from 'react';
-
-function UncontrolledInput() {
-  const inputRef = useRef();
-
-  const handleClick = () =&gt; {
-    alert(`Valor digitado: ${inputRef.current.value}`);
-  };
-
-  return (
-    &lt;div&gt;
-      &lt;input type=&quot;text&quot; ref={inputRef} /&gt;
-      &lt;button onClick={handleClick}&gt;Mostrar Valor&lt;/button&gt;
-    &lt;/div&gt;
-  );
+<blockquote>
+<p>A sintaxe JSON é derivada da sintaxe de notação de objeto JavaScript, mas o formato JSON é apenas texto. O código para leitura e geração de dados JSON pode ser escrito em qualquer programação Idioma.</p>
+</blockquote>
+<h4 id="exemplo-de-json">Exemplo de JSON</h4>
+<p>Essa sintaxe JSON define um objeto employees: uma matriz de 3 registros de funcionários (objetos):</p>
+<pre><code class="language-js">{
+&quot;employees&quot;:[
+  {&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
+  {&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
+  {&quot;firstName&quot;:&quot;Peter&quot;, &quot;lastName&quot;:&quot;Jones&quot;}
+]
 }
 </code></pre>
-<hr />
-<h3 id="vantagens-dos-eventos-controlados"><strong>✅ Vantagens dos Eventos Controlados</strong></h3>
-<p>✔ <strong>Validação em tempo real</strong> (ex: bloquear caracteres inválidos).<br />
-✔ <strong>Fácil manipulação antes de enviar dados</strong> (ex: formatação).<br />
-✔ <strong>Integração com outros estados</strong> (ex: habilitar/desabilitar botões).<br />
-✔ <strong>Mais previsível e alinhado com o fluxo do React</strong>.</p>
-<hr />
-<h3 id="conclusao"><strong>🔹 Conclusão</strong></h3>
+<p>O formato JSON é avaliado como objetos JavaScript</p>
+<p><strong>O formato JSON é sintaticamente idêntico ao código para criar Objetos JavaScript.</strong></p>
+<p>Devido a essa semelhança, um programa JavaScript pode facilmente converter dados JSON em nativos Objetos JavaScript.</p>
+<h3 id="regras-de-sintaxe-json">Regras de sintaxe JSON</h3>
 <ul>
-<li><strong>Controlados</strong>: O React gerencia o estado do input (<code>value</code> + <code>onChange</code>).  </li>
-<li><strong>Não controlados</strong>: O DOM gerencia o valor (acessado via <code>ref</code>).  </li>
+<li>Os dados estão em pares de nome/valor</li>
+<li>Os dados são separados por vírgulas</li>
+<li>Chaves seguram objetos</li>
+<li>Os colchetes contêm matrizes</li>
 </ul>
-<p><strong>Use eventos controlados na maioria dos casos</strong> para manter a consistência e facilitar o gerenciamento de formulários no React. 🚀</p></div>
+<h3 id="dados-json-um-nome-e-um-valor">Dados JSON - Um nome e um valor</h3>
+<p>Os dados JSON são gravados como pares de nome/valor, assim como o objeto JavaScript Propriedades.</p>
+<p>Um par nome/valor consiste em um nome de campo (entre aspas duplas), seguido por dois pontos, seguido por um valor:</p>
+<pre><code class="language-js">&quot;firstName&quot;:&quot;John&quot;
+</code></pre>
+<p><strong>Os nomes JSON exigem aspas duplas. Nomes JavaScript não.</strong></p>
+<h3 id="objetos-json">Objetos JSON</h3>
+<p>Os objetos JSON são gravados dentro de chaves.</p>
+<p>Assim como em JavaScript, os objetos podem conter vários pares de nome/valor:</p>
+<pre><code class="language-js">{&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;}
+</code></pre>
+<h3 id="matrizes-json">Matrizes JSON</h3>
+<p>As matrizes JSON são escritas entre colchetes.</p>
+<p>Assim como em JavaScript, um array pode conter objetos:</p>
+<pre><code class="language-js">&quot;employees&quot;:[
+  {&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
+  {&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
+  {&quot;firstName&quot;:&quot;Peter&quot;, &quot;lastName&quot;:&quot;Jones&quot;}
+]
+</code></pre>
+<p>No exemplo acima, o objeto "funcionários" é uma matriz. Ele contém três Objetos.</p>
+<p>Cada objeto é um registro de uma pessoa (com um nome e um sobrenome).</p>
+<h3 id="convertendo-um-texto-json-em-um-objeto-javascript">Convertendo um texto JSON em um objeto JavaScript</h3>
+<p>Um uso comum do JSON é ler dados de um servidor web, e exibir os dados em uma página da web.</p>
+<p>Para simplificar, isso pode ser demonstrado usando uma string como entrada.</p>
+<p>Primeiro, crie uma string JavaScript contendo a sintaxe JSON:</p>
+<p>let text = '{ "employees" : [' +
+'{ "firstName":"John" , "lastName":"Doe" },' +
+'{ "firstName":"Anna" , "lastName":"Smith" },' +
+'{ "firstName":"Peter" , "lastName":"Jones" } ]}';</p>
+<pre><code class="language-js">let text = '{ &quot;employees&quot; : [' +
+'{ &quot;firstName&quot;:&quot;John&quot; , &quot;lastName&quot;:&quot;Doe&quot; },' +
+'{ &quot;firstName&quot;:&quot;Anna&quot; , &quot;lastName&quot;:&quot;Smith&quot; },' +
+'{ &quot;firstName&quot;:&quot;Peter&quot; , &quot;lastName&quot;:&quot;Jones&quot; } ]}';
+</code></pre>
+<p>Em seguida, use a função interna do JavaScript para converter a string em um objeto JavaScript:JSON.parse()</p>
+<pre><code class="language-js">const obj = JSON.parse(text);
+</code></pre>
+<p>Por fim, use o novo objeto JavaScript em sua página:</p>
+<pre><code class="language-html">&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById(&quot;demo&quot;).innerHTML =
+obj.employees[1].firstName + &quot; &quot; + obj.employees[1].lastName;
+&lt;/script&gt;
+</code></pre>
+<p>const obj = JSON.parse(text);
+obj.employees[1].firstName + " " + obj.employees[1].lastName;</p></div>
         
         
     </div>
