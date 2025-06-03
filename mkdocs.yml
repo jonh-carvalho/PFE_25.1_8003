@@ -1,15 +1,16 @@
 site_name: PFE_25.1_8003
-theme:
-  name: null
-  custom_dir: 'cinder'
+theme: 
+  name: journal
   locale: pt_BR
   highlightjs: true
+  prev_next_buttons_location: top
   hljs_languages:
     - yaml
     - python
     - html
     - css
     - javascript
+  
 plugins:
   - open-in-new-tab
 repo_url: "https://github.com/jonh-carvalho/PFE_25.1_8003"
