@@ -1,6 +1,6 @@
 site_name: PFE_25.1_8003
 theme: 
-  name: journal
+  name: simplex
   locale: pt_BR
   highlightjs: true
   prev_next_buttons_location: top

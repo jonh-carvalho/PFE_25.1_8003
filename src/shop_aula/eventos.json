@@ -1,0 +1,28 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "name": "Lançamento de Produto",
+      "date": "2024-05-15T10:00:00Z",
+      "location": "Auditório Principal",
+      "description": "Apresentação do novo Laptop Moderno e Smartphone Avançado.",
+      "attendees": 150
+    },
+    {
+      "id": 2,
+      "name": "Workshop de React",
+      "date": "2024-06-20T14:00:00Z",
+      "location": "Sala de Treinamento A",
+      "description": "Curso intensivo sobre desenvolvimento com React.",
+      "attendees": 50
+    },
+    {
+      "id": 3,
+      "name": "Feira de Tecnologia",
+      "date": "2024-07-10T09:00:00Z",
+      "location": "Centro de Convenções",
+      "description": "Exposição de novos produtos eletrônicos e gadgets.",
+      "attendees": 300
+    }
+  ]
+}
