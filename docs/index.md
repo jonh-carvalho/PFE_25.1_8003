@@ -1,11 +1,24 @@
-## Projeto Front-End
+---
+hide:
+  - navigation
+  - toc
+---  
+
+# Projeto Front-End - [AP2](https://jonh-carvalho.github.io/PFE_25.1_8003/__Ap2/ap2/)
 
 ## Grupos
 
-* [PFE_25.1_8003_I](https://github.com/Projetos-de-Extensao/PFE_25.1_8003_I)
-* [PFE_25.1_8003_Festify](https://github.com/Projetos-de-Extensao/PFE_25.1_8003_II)
+<div class="grid" markdown>
 
-# [AP2](https://jonh-carvalho.github.io/PFE_25.1_8003/__Ap2/ap2/)
+:fontawesome-brands-react: __[PFE_25.1_8003_I](https://github.com/Projetos-de-Extensao/PFE_25.1_8003_I)__ 
+{ .card }
+
+:fontawesome-brands-react: __[PFE_25.1_8003_Festify](https://github.com/Projetos-de-Extensao/PFE_25.1_8003_II)__ 
+{ .card }
+
+
+</div>
+
 
 ## Sobre
 

@@ -1,8 +1,9 @@
 ---
-repo_url: https://github.com/jonh-carvalho/PFE_25.1_8001
+
+repo_url: https://github.com/jonh-carvalho/PFE_25.1_8003
 site_author: Jonh Carvalho
-site_name: PFE_25.1_8001
-copyright: Copyright ©️ 2025, jonh-carvalho / 2025, Jonh Carvalho
+site_name: PFE_25.1_8003
+copyright: Copyright ©️ 2025, 2025, Jonh Carvalho
 
 extra_css:
   - css/extra.css
@@ -55,8 +56,6 @@ markdown_extensions:
   - pymdownx.tilde
   # Data Tables
   - tables
-  - toc:
-      permalink: true
 
 plugins:
   - minify:
