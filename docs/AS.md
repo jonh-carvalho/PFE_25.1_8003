@@ -76,37 +76,38 @@ title: Avaliação Substitutiva
 
 ### **Epics, Features e User Stories(US)** (30 min)
 
-### **Epic 1: Catálogo de Serviços**
+### **Epic 1:** Catálogo de Serviços
 
-**Feature 1.1: Listagem de Serviços**
+**Feature 1.1:** Listagem de Serviços
 
       *  **US 1.1.1:** -
 
-**Feature 1.2: Filtro e Busca**
+**Feature 1.2:** Filtro e Busca
 
       *  **US 1.2.1:** - 
       *  **US 1.2.2:** -
 
-### **Epic 2: Detalhes dos Serviços**
+### **Epic 2:** Detalhes dos Serviços
 
-**Feature 2.1: Página de Detalhes**
+**Feature 2.1:** Página de Detalhes
 
       * **US 2.1.1:** - 
 
-### **Epic 3: Navegação e Interface**
+### **Epic 3:** Navegação e Interface
 
-**Feature 3.1: Estrutura de Navegação**
+**Feature 3.1:** Estrutura de Navegação
 
       * **US 3.1.1:** - 
 
-### **Epic 4: Documentação e Deploy**
+### **Epic 4:** Documentação e Deploy
 
-**Feature 4.1: Documentação Técnica e Funcional**
+**Feature 4.1:** Documentação Técnica e Funcional
 
-   * **US 4.1.1:* -
+      * **US 4.1.1:* -
   
-**Feature 4.2: Deploy**
-     * **US 4.2.1:** - 
+**Feature 4.2:** Deploy
+
+      * **US 4.2.1:** - 
 
 
 ### **Entregáveis:**
@@ -240,13 +241,14 @@ Aprimorar a experiência, criar documentação e disponibilizar o app.
 
 ### **Atividades:**
 
-* Implementar as funcionalidades principais do app conforme o backlog dos sprints.
-* Desenvolver os componentes React: Header, Footer, ServiceCard, FilterBar, SearchBar e ServiceDetails.
-* Integrar a navegação entre páginas (Home e Detalhes do Serviço).
-* Utilizar dados mockados para exibir a lista de serviços.
-* Aplicar estilos e garantir responsividade da interface.
-* Realizar testes manuais das funcionalidades (navegação, busca, filtros, detalhes).
-* Atualizar a documentação técnica e do usuário no MkDocs durante o desenvolvimento.
+* Testes manuais realizados.
+* Documentação técnica (guia do usuário, desenvolvedor, arquitetura) no MkDocs.
+* Deploy Documentação Mkdocs Atualizada (GitHub Pages).
+* Issues criadas e organizadas no GitHub.
+* GitHub Project atualizado.
+
+---
+
 
 ## **Modelo de Checklist Geral de Entrega**
 
