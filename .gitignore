@@ -128,6 +128,7 @@ ENV/
 env.bak/
 venv.bak/
 exemplos/
+tmp/
 
 # Spyder project settings
 .spyderproject
