@@ -4,7 +4,7 @@ hide:
   - toc
 ---  
 
-# Projeto Front-End - [AP2](https://jonh-carvalho.github.io/PFE_25.1_8003/__Ap2/ap2/)
+# Projeto Front-End
 
 ## Grupos
 
